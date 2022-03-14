@@ -1,0 +1,79 @@
+body,
+p,
+h1 {
+  margin: 0;
+}
+
+.Nav-Bar {
+  background-color: #FFFFFF;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  height: 8.3vh;
+}
+.Nav-Bar div {
+  display: flex;
+  gap: 1rem;
+}
+
+.intro-container {
+  background-color: #333333;
+}
+.intro-container .container-element {
+  display: grid;
+  columns: 1fr;
+  background-color: #333333;
+  color: #FFFFFF;
+  height: 63vh;
+  margin-left: 5vw;
+  margin-right: 10vw;
+}
+.intro-container .container-element .container-intro {
+  padding-top: 10vh;
+}
+.intro-container .container-element .container-title {
+  font-size: 29px;
+}
+.intro-container .container-element .container-btn {
+  padding-bottom: 2vh;
+}
+
+.container-fecha {
+  display: grid;
+  background-color: #222222;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-top: 2em;
+  height: 15em;
+}
+
+.btn-normal {
+  width: 217px;
+  height: 60px;
+  background-color: #BEAD8E;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btn-large {
+  width: 260px;
+  height: 60px;
+  background-color: #BEAD8E;
+  border: none;
+  color: #FFFFFF;
+}
+
+.mlb {
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.btn-oscuro {
+  width: 217px;
+  height: 60px;
+  background-color: #333333;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.33);
+}
+
+/*# sourceMappingURL=main.css.map */

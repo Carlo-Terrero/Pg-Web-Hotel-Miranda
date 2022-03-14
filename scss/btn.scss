@@ -1,0 +1,31 @@
+.btn-normal{
+    //position: absolute;
+    width:217px;
+    height:60px;
+    background-color: $crema;
+    border:none;
+    color: $neutro;
+    
+}
+
+.btn-large{
+    //position: absolute;
+    width: 260px;
+    height:60px;
+    background-color: $crema;
+    border:none;
+    color: $neutro;
+}
+
+.mlb{
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.btn-oscuro{
+    width:217px;
+    height:60px;
+    background-color: $dark-grey;
+    color: $neutro;
+    border: 2px solid rgba(255, 255, 255, 0.33);
+}

@@ -1,0 +1,12 @@
+.Nav-Bar{
+    background-color: $neutro;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 8.3vh;
+    
+    div{
+        display: flex;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,11 @@
+body,
+p,
+h1{
+    margin: 0;
+}
+
+
+@import "./variable";
+@import "./nav-bar.scss";
+@import "./home.scss";
+@import "./btn.scss";
