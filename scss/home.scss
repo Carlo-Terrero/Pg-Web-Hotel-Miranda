@@ -35,3 +35,48 @@
     padding-top: 2em;
     height: 15em;
 }
+
+.container-about-us{
+    display:flex;
+    flex-flow: column wrap;
+    background-color: $live-grey ;
+    height: 610px;
+    margin-top:4rem;
+    padding-left: 1em;
+    padding-right: 2em;
+
+    .encabezado{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-title{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-description{
+        margin-bottom: 2rem;
+    }
+}
+
+.block{
+    width: 270px;
+    height: 300px;
+    margin-left: 3.5rem;
+    background-color: $grey;
+}
+.bloques-ford{
+
+    .block-top{        
+        margin-top: -7rem;
+    }
+
+    .block-uno{
+        background-color: $neutro;
+    }
+
+    .block-black{
+        background-color: $black;
+    }
+}

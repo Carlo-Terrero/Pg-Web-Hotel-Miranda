@@ -47,6 +47,44 @@ h1 {
   height: 15em;
 }
 
+.container-about-us {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #F9F9F9;
+  height: 610px;
+  margin-top: 4rem;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+.container-about-us .encabezado {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.container-about-us .about-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.container-about-us .about-description {
+  margin-bottom: 2rem;
+}
+
+.block {
+  width: 270px;
+  height: 300px;
+  margin-left: 3.5rem;
+  background-color: #E4E4E4;
+}
+
+.bloques-ford .block-top {
+  margin-top: -7rem;
+}
+.bloques-ford .block-uno {
+  background-color: #FFFFFF;
+}
+.bloques-ford .block-black {
+  background-color: #222222;
+}
+
 .btn-normal {
   width: 217px;
   height: 60px;
