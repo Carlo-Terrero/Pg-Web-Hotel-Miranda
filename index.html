@@ -17,14 +17,21 @@
 <body>
     <div class="Nav-Bar">
         <!-- <i class='fas fa-times'></i> -->
-        <i class="fas fa-bars"></i> 
+        <i class="fas fa-bars" id="burguer"></i> 
 
         <div class="left">
             
             <h1 class="left-H">H</h1>
             <p>Hotel <br/> Miranda</p>
         </div>
-        
+
+        <div class="container-menu">
+            <a href="https://www.youtube.com/watch?v=x6bso0dDldI&ab_channel=Manute">About Us</a>
+            <a href="#">Rooms</a>
+            <a href="#">Offers</a>
+            <a href="#">Contact</a>
+        </div>
+
         <div class="right">            
             <i class='far fa-user'  ></i>
             <i class='fas fa-search'> </i>
@@ -56,20 +63,35 @@
     <div class="container-fecha">
         
         <div class="container-fecha-contenido">
-            <div class="container-entrada">
+
+            <div class="container-detail">
                 <p>Arrival Date</p>
 
+                <div class="detail">
+                    <i class='far fa-calendar'></i>
+                    <div class="line">
+
+                    </div>
+                </div>                               
+            </div>
+
+            <div class="container-detail mag-rigth">
+                <p>LeDeparture Date</p>
+
+                <div class="detail">
+                    <i class='far fa-calendar'> </i>
+                    <div class="line">
+                        
+                    </div>
+                </div>                
             </div>
 
             <div>
-                <p>LeDeparture Date</p>
-
-
-            </div>
-
-            <button class="btn-large">
+                <button class="btn-large">
                     CHECK AVAILABILITY
-            </button>
+                </button>
+            </div>
+            
         </div>
 
     </div>
@@ -119,4 +141,12 @@
     </div>
     
 </body>
+
+<!-- <script>
+    const navHamburger = document.querySelector('#navHamburger');
+    navHamburger.addEventListener('click', (e) => {
+        navHamburger.parentElement.classList.toggle('active');
+    })
+</script> -->
+
 </html>

@@ -41,8 +41,6 @@
                 
             }
               
-
-
         }
     }
 
@@ -58,14 +56,52 @@
         color: $neutro;
         padding-left: 1.5em;
         padding-top: 2em;
-        height: 15em;
+        height: 352px;
     
+        .container-fecha{
+            
+        }
+        .container-detail{
+            /* display: grid; */
+            margin-bottom: -2rem; 
+            padding-left: 0em;
+            p{
+                padding-bottom: 1rem;
+            }
+            .detail{
+                display: grid;
+                color: $crema;
+                .line{
+                    background-color: $crema;
+                    height: 0.1rem;
+                    margin-top: 0.9rem;
+                    width: 70vw;
+                    max-width: 350px;
+                }
+            }
+        }
+        
+
         @media only screen and (min-width: $desktop-breakpoint){
-            display: flex;
+            padding-left: 0;
             @include margenes;
+            display: flex;
+            gap: 3vw;            
             max-height: 100px;
             
-            
+            .container-detail{
+
+                .detail{
+                    
+                    .line{
+                        background-color: $crema;
+                        height: 0.1rem;
+                        margin-top: 0.9rem;
+                        width: 15vw;
+                    }
+                }
+            }
+
                
         }
     }

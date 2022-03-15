@@ -3,6 +3,9 @@ p,
 h1 {
   margin: 0; }
 
+.mag-rigth {
+  margin-right: 12vw; }
+
 .Nav-Bar {
   width: 100%;
   background-color: #FFFFFF;
@@ -20,6 +23,18 @@ h1 {
       padding-left: 0.3rem;
       padding-right: 0.3rem;
       box-shadow: 0px 25px 37px 3px rgba(0, 0, 0, 0.22); }
+  .Nav-Bar .container-menu {
+    display: none; }
+    .Nav-Bar .container-menu a {
+      color: black;
+      text-decoration: none; }
+  @media only screen and (min-width: 1000px) {
+    .Nav-Bar #burguer {
+      display: none; }
+    .Nav-Bar .container-menu {
+      display: flex;
+      gap: 35px;
+      margin-left: -15vw; } }
 
 .intro-container {
   background-color: #333333; }
@@ -54,13 +69,35 @@ h1 {
     color: #FFFFFF;
     padding-left: 1.5em;
     padding-top: 2em;
-    height: 15em; }
+    height: 352px; }
+    .container-fecha .container-fecha-contenido .container-detail {
+      /* display: grid; */
+      margin-bottom: -2rem;
+      padding-left: 0em; }
+      .container-fecha .container-fecha-contenido .container-detail p {
+        padding-bottom: 1rem; }
+      .container-fecha .container-fecha-contenido .container-detail .detail {
+        display: grid;
+        color: #BEAD8E; }
+        .container-fecha .container-fecha-contenido .container-detail .detail .line {
+          background-color: #BEAD8E;
+          height: 0.1rem;
+          margin-top: 0.9rem;
+          width: 70vw;
+          max-width: 350px; }
     @media only screen and (min-width: 1000px) {
       .container-fecha .container-fecha-contenido {
-        display: flex;
+        padding-left: 0;
         margin-left: 12vw;
         margin-right: 12vw;
-        max-height: 100px; } }
+        display: flex;
+        gap: 3vw;
+        max-height: 100px; }
+        .container-fecha .container-fecha-contenido .container-detail .detail .line {
+          background-color: #BEAD8E;
+          height: 0.1rem;
+          margin-top: 0.9rem;
+          width: 15vw; } }
 
 .container-about-us {
   display: flex;
