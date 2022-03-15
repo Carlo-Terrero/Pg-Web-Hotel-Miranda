@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/9cb55a2a50.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/9cb55a2a50.js" crossorigin="anonymous"></script> -->
     <title>Document</title>
+    <!--Esto es para los iconos-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
     <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <link rel="stylesheet" href="css/main.css">
     
@@ -13,16 +16,18 @@
 </head>
 <body>
     <div class="Nav-Bar">
-        <button>-<i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- <i class='fas fa-times'></i> -->
+        <i class="fas fa-bars"></i> 
 
         <div class="left">
-            <button>H</button>
+            
+            <h1 class="left-H">H</h1>
             <p>Hotel <br/> Miranda</p>
         </div>
         
-        <div class="right">
-            <p>O</p>
-            <p>P</p>
+        <div class="right">            
+            <i class='far fa-user'  ></i>
+            <i class='fas fa-search'> </i>
         </div>
     </div>
     
@@ -50,21 +55,22 @@
 
     <div class="container-fecha">
         
-        <div class="container-entrada">
-            <p>Arrival Date</p>
+        <div class="container-fecha-contenido">
+            <div class="container-entrada">
+                <p>Arrival Date</p>
+
+            </div>
+
+            <div>
+                <p>LeDeparture Date</p>
 
 
+            </div>
+
+            <button class="btn-large">
+                    CHECK AVAILABILITY
+            </button>
         </div>
-
-        <div>
-            <p>LeDeparture Date</p>
-
-
-        </div>
-
-        <button class="btn-large">
-                CHECK AVAILABILITY
-        </button>
 
     </div>
 

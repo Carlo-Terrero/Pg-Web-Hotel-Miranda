@@ -16,25 +16,62 @@
         }
 
         .container-title{
-            font-size: 29px;
 
+            h1{
+                font-size: 6.5vh;
+            }           
         }
         
         .container-btn{
             padding-bottom: 2vh;
         }
+
+        @media only screen and (min-width: $desktop-breakpoint){
+            //aqui va el mixing para los bordes
+            @include margenes; 
+            .container-intro{
+                display: flex;
+                align-items: center;
+            }
+
+            .container-title{
+                h1{
+                    font-size: 12vh;
+                }
+                
+            }
+              
+
+
+        }
     }
+
+   
 
 }
 
 .container-fecha{
-    display: grid;
     background-color: $black;
-    color: $neutro;
-    padding-left: 1.5em;
-    padding-top: 2em;
-    height: 15em;
+
+    .container-fecha-contenido{
+        display: grid;
+        color: $neutro;
+        padding-left: 1.5em;
+        padding-top: 2em;
+        height: 15em;
+    
+        @media only screen and (min-width: $desktop-breakpoint){
+            display: flex;
+            @include margenes;
+            max-height: 100px;
+            
+            
+               
+        }
+    }
 }
+
+
 
 .container-about-us{
     display:flex;
