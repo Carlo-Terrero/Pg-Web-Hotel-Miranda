@@ -101,8 +101,6 @@
                     }
                 }
             }
-
-               
         }
     }
 }
@@ -121,6 +119,7 @@
     .encabezado{
         margin-top: 2rem;
         margin-bottom: 1.5rem;
+        color: $letra-grey;
     }
 
     .about-title{
@@ -133,23 +132,283 @@
     }
 }
 
-.block{
-    width: 270px;
-    height: 300px;
-    margin-left: 3.5rem;
-    background-color: $grey;
-}
+// BLOQUES
 .bloques-ford{
 
     .block-top{        
         margin-top: -7rem;
     }
 
-    .block-uno{
+    .block-white{
         background-color: $neutro;
+        margin-bottom: 3rem;
+        box-shadow: 0px 14px 14px -3px rgba(0,0,0,0.03);
+
+        .block-white-svg{
+            
+            .image-s{
+                color:red;
+                margin-left: 3rem;
+                margin-bottom: 3rem;
+            }
+
+            .image-b{
+                margin-top: 2rem;
+            }
+        }
     }
 
-    .block-black{
-        background-color: $black;
+   
+}
+
+
+//Rooms-styles
+.rooms{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+
+    .encabezado-rooms{
+        color: $letra-grey;
+    }
+
+    .title-rooms{
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .container-pgn{
+        display: flex;
+        width: 256px;
+        height: 40px;
+        background-color: $neutro;
+        margin-left: 17vw;
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;              
+    }
+
+    .corredor-img{
+        height: 244px;
+        background-color: $color-img;
+        
+        .flechas-direc{
+            display: flex;
+            position: relative;
+            margin-top: 7rem;
+            justify-content: space-around;
+        }
+    }
+
+    .container-detail{
+        display: grid;
+        position: relative;
+        text-align: center;
+        width: 335px;
+        height: 215px;
+        background-color: $neutro;
+        margin-left: 7vw;
+        margin-top: -1.5rem;
+
+        p{
+            padding-left:2rem;
+            padding-right:2rem;
+        }
+
+        .cabecera-detail{
+            margin-top: 20px;
+            font-size: 1.8rem;
+        }
+
+        .precio-detail{
+            font-size: 2rem;
+            color: $crema;
+        }
+    }
+
+}
+
+
+//Intro video
+.intro-video{
+    display: grid;
+    background-color: $black;
+    padding-bottom: 2.5rem;
+    
+    //height: 876px;
+    .container-video{
+        display: grid;
+        color: $neutro;    
+        margin-left: 1rem;
+        margin-right: 1rem;
+        gap: 2rem;
+
+        .encabezado-video{
+            color: $crema;
+            padding-top: 3rem;
+            margin-bottom: -1rem;
+        }
+
+        .title-video{
+            font-size: 2rem;
+        }
+
+        .container-reproductor{
+            height: 270px;
+            background-color: $color-img;
+        }
+
+
+    }
+}
+
+
+//FACILITIES
+.facilities{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+
+    .encabezado-facil{
+        color: $letra-grey;        
+    }
+
+    .title-facil{
+        font-size: 1.7rem;
+        padding-top: 1rem;
+    }
+
+    .container-facil{
+        display: grid;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+
+        .facilities-individula{
+
+
+            .img-container{
+                
+                justify-content: space-between;
+                .num-img{
+                    margin-left: 9rem;
+                    width: 7rem;
+                    height: 5rem;
+                    padding-bottom: 3rem;
+                    padding-top: 2rem;
+                }
+
+                .icon-img{
+                    width: 3.4rem;
+                    height: 3.4rem;
+                    padding-bottom: 1rem;
+                    
+                }
+                
+            }
+
+            .facil-title{
+                font-size: 1.7rem;
+                margin-bottom: 1.4rem;
+            }
+            
+            .facil-content{
+                margin-bottom: 0.5rem;
+            }           
+        }
+
+        
+    }
+}
+
+.img-galleta-s{
+    float: right;
+    margin-top: 4rem;
+}
+
+.container-menu{
+    margin-top: 11rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    .encabezado-menu{
+        color: $letra-grey;
+    }
+
+    .title-menu{
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .lista-menu{
+        display: grid;
+        gap: 1rem;
+        
+        .plato{
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: 120px 1fr;
+
+            .img-plato{
+                display:block;
+                width: 120px;
+                height: 120px;
+                background-color: $color-img;
+            }
+
+            .descrip-plato{
+                gap: 1rem;
+
+                .title-descrip-plato{
+                    color: $black;
+                    font-size: 0.9rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+    }
+    
+    .flechas-direc-menu{
+        display: flex;
+        justify-content: right;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .arrow-left{
+            background-color: $grey;
+        }
+    }
+
+    .img-menu-big{
+        height: 335px;
+        width: 358px;
+        background-color: $grey;
+        margin-top: 3.5rem;
+    }
+
+    .tres-puntos{
+        text-align: center;
+    }    
+
+}
+
+.container-information{
+    background-color: $black;
+   
+    .container-num{
+        display: flex;
+    }
+
+    .container-descrip{
+        color: $letra-grey;
     }
 }
