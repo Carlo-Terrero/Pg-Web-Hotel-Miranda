@@ -34,7 +34,8 @@ h1, h2, h3, h4 {
     .Nav-Bar .container-menu {
       display: flex;
       gap: 35px;
-      margin-left: -15vw; } }
+      margin-left: -15vw;
+      margin-top: 0rem; } }
 
 .intro-container {
   background-color: #333333; }
@@ -359,7 +360,8 @@ h1, h2, h3, h4 {
       .footer .container-footer .intro .footer-content-intro {
         font-size: 1rem;
         margin-top: 1rem;
-        color: #777777; }
+        color: #777777;
+        max-width: 335px; }
       .footer .container-footer .intro .icon-marcas {
         display: flex;
         gap: 0.7rem;
@@ -379,7 +381,7 @@ h1, h2, h3, h4 {
       .footer .container-footer .footer-services .contain-service-colum {
         display: flex;
         align-items: self-start;
-        gap: 2rem; }
+        gap: 4rem; }
         .footer .container-footer .footer-services .contain-service-colum .services-colum {
           display: grid;
           gap: 1rem;
@@ -396,6 +398,18 @@ h1, h2, h3, h4 {
           color: #777777; }
         .footer .container-footer .contact-us .phone-number .content-phone-number .content-number {
           color: #777777; }
+    @media only screen and (min-width: 1000px) {
+      .footer .container-footer {
+        margin-left: 12vw;
+        margin-right: 12vw;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        gap: 2vw; }
+        .footer .container-footer .footer-content-intro {
+          background-color: aqua;
+          max-width: 335px;
+          max-height: 130px; } }
   .footer .info-line {
     background-color: #F8F8F8; }
     .footer .info-line .container-info-line {
@@ -404,6 +418,12 @@ h1, h2, h3, h4 {
       .footer .info-line .container-info-line div {
         margin-top: 1rem;
         margin-bottom: 1rem; }
+      @media only screen and (min-width: 1000px) {
+        .footer .info-line .container-info-line {
+          margin-left: 12vw;
+          margin-right: 12vw;
+          display: flex;
+          justify-content: space-between; } }
 
 .puntos {
   color: #BEAD8E;
