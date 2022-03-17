@@ -1,0 +1,125 @@
+.footer{
+    background-image: url('../assets/svg/footer_back.png');
+    display: grid;
+    padding-top: 3vh;
+    .container-footer{
+        @include margenes-pequños;
+        display: grid;
+        gap: 1.5rem;
+
+        .intro{
+            display: grid;
+            gap: 1rem;
+
+            .footer-encabezado{
+                display: flex;
+                gap: 2rem;   
+                align-items: center;
+
+                .footer-logo-h{
+                    //padding: 1rem;
+                    width: 6rem;
+                    background-color: $crema;
+                    color: $neutro;
+                    text-align: center;
+
+                    h1{
+                        font-size: 50px;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+
+                .footer-name{
+                    font-size: 1.9rem;
+                }
+            }
+
+            .footer-content-intro{
+                font-size: 1rem;
+                margin-top:1rem;
+                color: $letra-grey;
+            }
+
+            .icon-marcas{
+                display: flex;
+                gap: 0.7rem;
+                margin-top:1rem;
+                
+
+                div{
+                    font-size: 24px;
+                    background-color: $grey;
+                    padding: 0.5rem;
+                }
+
+                div:hover{
+                    background-color: $crema;
+                    color: $neutro;
+                }
+                
+            }
+        }
+
+        .footer-services{
+
+            display: flex;
+
+            .services-left{
+                display: grid;
+                gap: 2rem;            
+            }        
+            
+            .contain-service-colum{
+                display: flex;
+                align-items: self-start;
+                gap: 2rem;
+
+                .services-colum{
+                    display: grid;
+                    gap: 1rem;
+                    color: $letra-grey;
+                }
+            }
+        }
+
+        .contact-us{
+            display: grid;
+            gap: 1rem;
+
+            .contact-title{
+
+            }
+
+            .phone-number{
+                display: flex;
+                gap: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                .content-phone-number{
+                    .content-text{
+                        color: $letra-grey;
+                    }
+
+                    .content-number{
+                        color: $letra-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .info-line{
+        background-color: $live-grey;
+
+        .container-info-line{
+            @include margenes-pequños;
+            
+            div{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

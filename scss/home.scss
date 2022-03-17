@@ -328,15 +328,18 @@
     }
 }
 
+
+//icon galleta
 .img-galleta-s{
     float: right;
     margin-top: 4rem;
 }
 
+
+//Menu
 .container-menu{
     margin-top: 11rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    @include margenes-pequños;
 
     .encabezado-menu{
         color: $letra-grey;
@@ -401,11 +404,33 @@
 
 }
 
+
+//Contenedor Negro
 .container-information{
     background-color: $black;
-   
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+
+
     .container-num{
         display: flex;
+        font-size: 1.5rem;
+        justify-content: center;
+        margin-left: -1.5rem;
+        margin-top: 1.5rem;
+       
+        h1{
+            padding-left: -1rem;
+        }
+        h6{
+            margin-top: 1.9rem;
+            margin-bottom: -2rem;
+        }
     }
 
     .container-descrip{

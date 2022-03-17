@@ -2,3 +2,8 @@
     margin-left: 12vw;
     margin-right: 12vw;
 }
+
+@mixin margenes-pequños {
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
