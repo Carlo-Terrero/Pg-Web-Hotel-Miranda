@@ -46,7 +46,7 @@
                 display: flex;
                 gap: 0.7rem;
                 margin-top:1rem;
-                
+                max-height: 40px;
 
                 div{
                     font-size: 24px;
@@ -64,8 +64,8 @@
 
         
         .footer-services{
-
             display: flex;
+            justify-content: center;
 
             .services-left{
                 display: grid;
@@ -75,7 +75,7 @@
             .contain-service-colum{
                 display: flex;
                 align-items: self-start;
-                gap: 4rem;
+                gap: 3rem;
 
                 .services-colum{
                     display: grid;
@@ -88,6 +88,7 @@
         .contact-us{
             display: grid;
             gap: 1rem;
+            justify-content: center;
 
             .phone-number{
                 display: flex;
@@ -115,8 +116,7 @@
             padding-bottom: 5rem;
             gap: 2vw;
 
-            .footer-content-intro{
-                background-color: aqua;
+            .footer-content-intro{               
                 max-width: 335px;
                 max-height: 130px;
             }

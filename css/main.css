@@ -23,11 +23,23 @@ h1, h2, h3, h4 {
       padding-left: 0.3rem;
       padding-right: 0.3rem;
       box-shadow: 0px 25px 37px 3px rgba(0, 0, 0, 0.22); }
+  .Nav-Bar #burguer:active {
+    background-color: aqua; }
   .Nav-Bar .container-menu {
+    background-color: #FFFFFF;
+    color: #222222;
+    display: grid;
+    width: 100%;
+    position: absolute;
+    margin-top: 17.1rem;
     display: none; }
     .Nav-Bar .container-menu a {
       color: black;
-      text-decoration: none; }
+      text-decoration: none;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 1.5rem; }
   @media only screen and (min-width: 1000px) {
     .Nav-Bar #burguer {
       display: none; }
@@ -35,7 +47,11 @@ h1, h2, h3, h4 {
       display: flex;
       gap: 35px;
       margin-left: -15vw;
-      margin-top: 0rem; } }
+      margin-top: 0rem;
+      position: relative;
+      max-width: 370px; }
+      .Nav-Bar .container-menu a {
+        font-size: 1rem; } }
 
 .intro-container {
   background-color: #333333; }
@@ -100,7 +116,7 @@ h1, h2, h3, h4 {
           margin-top: 0.9rem;
           width: 15vw; } }
 
-.container-about-us {
+.container-container .container-about-us {
   display: flex;
   flex-flow: column wrap;
   background-color: #F8F8F8;
@@ -108,28 +124,43 @@ h1, h2, h3, h4 {
   margin-top: 4rem;
   padding-left: 1em;
   padding-right: 2em; }
-  .container-about-us .encabezado {
+  .container-container .container-about-us .encabezado {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     color: #777777; }
-  .container-about-us .about-title {
+  .container-container .container-about-us .about-title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem; }
-  .container-about-us .about-description {
+  .container-container .container-about-us .about-description {
     margin-bottom: 2rem; }
-
-.bloques-ford .block-top {
+.container-container .bloques-ford .block-top {
   margin-top: -7rem; }
-.bloques-ford .block-white {
+.container-container .bloques-ford .block-white {
   background-color: #FFFFFF;
   margin-bottom: 3rem;
   box-shadow: 0px 14px 14px -3px rgba(0, 0, 0, 0.03); }
-  .bloques-ford .block-white .block-white-svg .image-s {
+  .container-container .bloques-ford .block-white .block-white-svg .image-s {
     color: red;
     margin-left: 3rem;
     margin-bottom: 3rem; }
-  .bloques-ford .block-white .block-white-svg .image-b {
+  .container-container .bloques-ford .block-white .block-white-svg .image-b {
     margin-top: 2rem; }
+@media only screen and (min-width: 1000px) {
+  .container-container {
+    margin-left: 12vw; }
+    .container-container .container-about-us {
+      background-color: brown;
+      padding-left: 17rem;
+      margin-left: 31rem;
+      margin-top: 13rem;
+      max-width: 300px;
+      margin-bottom: -44rem; }
+      .container-container .container-about-us .about-title {
+        max-width: 250rem; }
+        .container-container .container-about-us .about-title h1 {
+          font-size: 3.9rem; }
+      .container-container .container-about-us .about-description {
+        max-width: 22rem; } }
 
 .rooms {
   display: grid;
@@ -200,6 +231,26 @@ h1, h2, h3, h4 {
     .intro-video .container-video .container-reproductor {
       height: 270px;
       background-color: #E5E5E5; }
+    @media only screen and (min-width: 1000px) {
+      .intro-video .container-video {
+        margin-left: 12vw;
+        margin-right: 12vw;
+        display: grid;
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: auto;
+        grid-template-areas: "enca . video video" "title title video video" "descrip descrip video video" "btn . video video"; }
+        .intro-video .container-video .encabezado-video {
+          grid-area: enca; }
+        .intro-video .container-video .title-video {
+          grid-area: title; }
+        .intro-video .container-video .descrip-video {
+          margin-top: 2rem;
+          grid-area: descrip; }
+        .intro-video .container-video .container-reproductor {
+          grid-area: video;
+          margin-top: 3rem; }
+        .intro-video .container-video .btn-video {
+          grid-area: btn; } }
 
 .facilities {
   display: grid;
@@ -235,10 +286,20 @@ h1, h2, h3, h4 {
     .facilities .container-facil .facilities-individula .facil-content {
       margin-bottom: 0.5rem; }
 
+.img-galleta-b {
+  display: none;
+  margin-bottom: -9rem; }
+
 .img-galleta-s {
   float: right;
   margin-top: 4rem; }
 
+@media only screen and (min-width: 1000px) {
+  .img-galleta-s {
+    display: none; }
+
+  .img-galleta-b {
+    display: flex; } }
 .container-menu {
   margin-top: 11rem;
   margin-left: 4vw;
@@ -274,6 +335,9 @@ h1, h2, h3, h4 {
     margin-top: 1rem; }
     .container-menu .flechas-direc-menu .arrow-left {
       background-color: #E4E4E4; }
+  .container-menu #flechas-top {
+    display: none;
+    position: relative; }
   .container-menu .img-menu-big {
     height: 335px;
     width: 358px;
@@ -281,6 +345,22 @@ h1, h2, h3, h4 {
     margin-top: 3.5rem; }
   .container-menu .tres-puntos {
     text-align: center; }
+  @media only screen and (min-width: 1000px) {
+    .container-menu {
+      margin-left: 12vw;
+      margin-right: 12vw; }
+      .container-menu .encabezado-menu {
+        margin-top: -4rem; }
+      .container-menu #flechas-bot, .container-menu .img-galleta-s {
+        display: none; }
+      .container-menu .img-galleta-s {
+        display: none; }
+      .container-menu #flechas-top {
+        display: flex; }
+      .container-menu .img-menu-big {
+        margin-bottom: 4rem; }
+      .container-menu .tres-puntos {
+        display: none; } }
 
 .container-information {
   background-color: #222222;
@@ -304,6 +384,11 @@ h1, h2, h3, h4 {
       margin-bottom: -2rem; }
   .container-information .container-descrip {
     color: #777777; }
+  @media only screen and (min-width: 1000px) {
+    .container-information {
+      display: flex;
+      margin-left: 12vw;
+      margin-right: 12vw; } }
 
 .btn-normal {
   width: 217px;
@@ -365,7 +450,8 @@ h1, h2, h3, h4 {
       .footer .container-footer .intro .icon-marcas {
         display: flex;
         gap: 0.7rem;
-        margin-top: 1rem; }
+        margin-top: 1rem;
+        max-height: 40px; }
         .footer .container-footer .intro .icon-marcas div {
           font-size: 24px;
           background-color: #E4E4E4;
@@ -374,21 +460,23 @@ h1, h2, h3, h4 {
           background-color: #BEAD8E;
           color: #FFFFFF; }
     .footer .container-footer .footer-services {
-      display: flex; }
+      display: flex;
+      justify-content: center; }
       .footer .container-footer .footer-services .services-left {
         display: grid;
         gap: 2rem; }
       .footer .container-footer .footer-services .contain-service-colum {
         display: flex;
         align-items: self-start;
-        gap: 4rem; }
+        gap: 3rem; }
         .footer .container-footer .footer-services .contain-service-colum .services-colum {
           display: grid;
           gap: 1rem;
           color: #777777; }
     .footer .container-footer .contact-us {
       display: grid;
-      gap: 1rem; }
+      gap: 1rem;
+      justify-content: center; }
       .footer .container-footer .contact-us .phone-number {
         display: flex;
         gap: 1.5rem;
@@ -407,7 +495,6 @@ h1, h2, h3, h4 {
         padding-bottom: 5rem;
         gap: 2vw; }
         .footer .container-footer .footer-content-intro {
-          background-color: aqua;
           max-width: 335px;
           max-height: 130px; } }
   .footer .info-line {
