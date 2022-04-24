@@ -1,0 +1,10 @@
+.prueba {
+  background: rebeccapurple;
+}
+
+#pic:focus ~ .hola {
+  font-size: 3rem;
+  color: red;
+}
+
+/*# sourceMappingURL=about.css.map */

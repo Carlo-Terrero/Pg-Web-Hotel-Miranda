@@ -22,9 +22,11 @@
         }
     }
 
-    #burguer:active{
-        background-color: aqua;
+    #burguer:focus~.container-menu{
+        //background-color: aqua;
+        display: block;
     }
+
     .container-menu{        
         background-color: $neutro;
         color: $black;
