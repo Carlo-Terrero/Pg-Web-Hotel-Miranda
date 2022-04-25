@@ -2,6 +2,7 @@ body,
 p,
 h1, h2, h3, h4 {
   margin: 0;
+  padding: 0;
 }
 
 .mag-rigth {
@@ -72,11 +73,9 @@ h1, h2, h3, h4 {
 .intro-container .container-element {
   display: grid;
   columns: 1fr;
-  background-color: #333333;
   color: #FFFFFF;
   height: 63vh;
-  margin-left: 5vw;
-  margin-right: 10vw;
+  margin: 0 10vw 0 5vw;
 }
 .intro-container .container-element .container-intro {
   padding-top: 10vh;
@@ -659,6 +658,80 @@ h1, h2, h3, h4 {
 #pic:focus ~ .hola {
   font-size: 3rem;
   color: red;
+}
+
+.altura {
+  height: 32vh !important;
+}
+
+.margen_inferior {
+  margin-bottom: -3rem;
+}
+
+.indicador {
+  display: flex;
+  background: #FFFFFF;
+  gap: 0.5rem;
+  color: black;
+  width: 10rem;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  font-size: 1.3rem;
+  margin-bottom: -7.2vh;
+  margin-left: auto;
+}
+.indicador a {
+  text-decoration: none;
+  color: black;
+}
+.indicador p {
+  color: #BEAD8E;
+}
+
+.conten-contactos {
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+.conten-contactos .conten-contactos-element {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: 13rem;
+  background-position: bottom right;
+  height: 12rem;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  max-width: 360px;
+}
+.conten-contactos .conten-contactos-element .contact-imagen {
+  margin-top: 3rem;
+  height: 2.5rem;
+}
+.conten-contactos .conten-contactos-element .conten-element-data {
+  margin-top: 3rem;
+}
+.conten-contactos .conten-contactos-element .conten-element-data h2 {
+  margin-bottom: 1.5rem;
+}
+
+.imag-contact {
+  height: 200px;
+  background-color: #777777;
+  width: 92vw;
+  margin: 4rem 4vw;
+}
+
+.formulario-contact {
+  display: grid;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+.formulario-contact input {
+  border: none;
+  margin: 1rem 0;
+}
+.formulario-contact .btn-normal {
+  margin: 0 auto;
 }
 
 .puntos {

@@ -3,7 +3,7 @@
     display: grid;
     padding-top: 3vh;
     .container-footer{
-        @include margenes-pequños;
+        @include margenes-pequeños;
         display: grid;
         gap: 1.5rem;
 
@@ -127,7 +127,7 @@
         background-color: $live-grey;
 
         .container-info-line{
-            @include margenes-pequños;
+            @include margenes-pequeños;
             
             div{
                 margin-top: 1rem;
