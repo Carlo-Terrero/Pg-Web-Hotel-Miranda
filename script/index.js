@@ -1,17 +1,65 @@
+let map, infoWindow;
+
 function initMap() {
 
     //const uluru = { lat: 40.416713, lng: -3.703528, }/* , { lat: 41.667777, lng: -3.687337 }] */;
 
-    const map = new google.maps.Map(document.getElementById("imag-contact"), {
-      zoom: 3,
-      center: /* { lat: 40.416713, lng: -3.703528} */{ lat: -28.024, lng: 140.887 },
+    map = new google.maps.Map(document.getElementById("imag-contact"), {
+      zoom: 5,
+      center: { lat: 40.416713, lng: -3.703528} /* { lat: -28.024, lng: 140.887 } */,
     });
 
-    
-    const infoWindow = new google.maps.InfoWindow({
+    infoWindow = new google.maps.InfoWindow()
+
+    infoWindow = new google.maps.InfoWindow({
         content: "",
         disableAutoPan: true,
     })
+
+    //boton y modulo para geolocalizacion
+    const locationButton = document.createElement("button");
+
+    locationButton.textContent = "Pan to Current Location";
+    locationButton.classList.add("custom-map-control-button");
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+
+    locationButton.addEventListener("click", () => {
+      // Try HTML5 geolocation.
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+  
+            infoWindow.setPosition(pos);
+            infoWindow.setContent("Location found.");
+            infoWindow.open(map);
+            map.setCenter(pos);
+          },
+          () => {
+            handleLocationError(true, infoWindow, map.getCenter());
+          }
+        );
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
+    });
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+      infoWindow.setPosition(pos);
+      infoWindow.setContent(
+        browserHasGeolocation
+          ? "Error: The Geolocation service failed."
+          : "Error: Your browser doesn't support geolocation."
+      );
+      infoWindow.open(map);
+    }
+
+    //------------ final boton y modulo para geolocalizacion ------------------------
+    //Tenemos que maquetar el señalizador
 
     //Cree una matriz de caracteres alfabéticos utilizados para etiquetar los marcadores.
     const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -19,9 +67,6 @@ function initMap() {
     //Agregue algunos marcadores al mapa.
     //const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
   
-
-
-   
     const markers = locations.map((position, i) => {
         const label = labels[i % labels.length];
         const marker = new google.maps.Marker({
@@ -29,7 +74,7 @@ function initMap() {
                 path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
                 fillColor: "green",
                 fillOpacity: 0.6,
-                strokeWeight: 0,
+                strokeWeight: 0.3,
                 rotation: 0,
                 scale: 2,
                 anchor: new google.maps.Point(15, 30)
@@ -77,13 +122,13 @@ function initMap() {
     }); */
 }
 
-/* const locations = [
+const locations = [
     {lat: 41.657871, lng: -0.884742},
     {lat: 40.416713, lng: -3.703528},
-] */
+]
 
 
-const locations = [
+/* const locations = [
     { lat: -31.56391, lng: 147.154312 },
     { lat: -33.718234, lng: 150.363181 },
     { lat: -33.727111, lng: 150.371124 },
@@ -107,6 +152,9 @@ const locations = [
     { lat: -42.734358, lng: 147.501315 },
     { lat: -42.735258, lng: 147.438 },
     { lat: -43.999792, lng: 170.463352 },
-];
-  
-window.initMap = initMap();
+]; */
+
+window.addEventListener("DOMContentLoaded", () => {
+  window.initMap = initMap();
+
+})
