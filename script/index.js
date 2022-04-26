@@ -1,4 +1,4 @@
-let map, infoWindow;
+let map, infoWindow, marker, geocoder;
 
 function initMap() {
   const bounds = new google.maps.LatLngBounds();
@@ -8,8 +8,8 @@ function initMap() {
     zoom: 5,
     center: { lat: 40.416713, lng: -3.703528},
   });
+  geocoder = new google.maps.Geocoder();
 
-  //------------ matriz de distancia ----------------
 
   //infoWindow = new google.maps.InfoWindow()
 
@@ -18,8 +18,7 @@ function initMap() {
       disableAutoPan: true,
   })
 
-  //boton y modulo para geolocalizacion
-  //Tenemos que maquetar el señalizador que representa al usuario
+ 
 
   const locationButton = document.createElement("button");
 
@@ -27,6 +26,61 @@ function initMap() {
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
 
+  const inputText = document.createElement("input");
+  inputText.type = "text";
+  inputText.placeholder = "Enter a location";
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(inputText);
+
+  const submitButton = document.createElement("input");
+  submitButton.type = "button";
+  submitButton.value = "Geocode";
+  submitButton.classList.add("button", "button-primary");
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(submitButton); 
+
+  const clearButton = document.createElement("input");
+  clearButton.type = "button";
+  clearButton.value = "Clear";
+  clearButton.classList.add("button", "button-secondary");
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(clearButton);
+
+  marker = new google.maps.Marker({
+    map,
+  });
+  map.addListener("click", (e) => {
+    geocode({ location: e.latLng });
+  });
+  submitButton.addEventListener("click", () =>
+    geocode({ address: inputText.value })
+  );
+  clearButton.addEventListener("click", () => {
+    clear();
+  });
+  /* clear(); */
+
+  function clear() {
+    marker.setMap(null);
+  }
+
+  function geocode(request) {
+    clear();
+    geocoder
+      .geocode(request)
+      .then((result) => {
+        const { results } = result;
+  
+        map.setCenter(results[0].geometry.location);
+        marker.setPosition(results[0].geometry.location);
+        marker.setMap(map);
+        //response.innerText = JSON.stringify(result, null, 2);
+        return results;
+      })
+      .catch((e) => {
+        alert("Geocode was not successful for the following reason: " + e);
+      });
+  }
+  
+  //boton y modulo para geolocalizacion
+  //Tenemos que maquetar el señalizador que representa al usuario
   locationButton.addEventListener("click", () => {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -43,7 +97,6 @@ function initMap() {
           map.setCenter(pos);
 
           // initialize services
-          const geocoder = new google.maps.Geocoder();
           const service = new google.maps.DistanceMatrixService();
           // build request
           //const origin1 = { lat: 55.93, lng: -3.118 };
@@ -81,7 +134,7 @@ function initMap() {
 
             for(let i = 0 ; i < complet.length; ++i){
               //document.getElementById("response").innerHTML += distance[i] + '<br>'
-              document.getElementById("response").innerHTML += `<p>${complet[i].dir}  a ${complet[i].distance.text}</p> <br>` 
+              document.getElementById("sidebar").innerHTML += `<p>${complet[i].dir}  a ${complet[i].distance.text}</p> <br>` 
             }
 
 
@@ -99,6 +152,9 @@ function initMap() {
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
+  //------ FIN boton y modulo para geolocalizacion
+
+  //------------ matriz de distancia ----------------
 
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
