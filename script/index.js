@@ -1,7 +1,8 @@
 import {espanaComunidades} from './comunidades.js';
-import {comunidadesAutonomas} from './nameComunidades.js';
-//console.log(comunidadesAutonomas)
-//console.log(espanaComunidades[1])
+import {comunidadesAutonomas} from './nameComunidades.js'; 
+
+//De esta manera importamos el json como objeto y no nos da problemas
+import locations from './locations.json' assert {type: 'json'};
 
 let map, infoWindow, marker, geocoder;
 
@@ -210,7 +211,7 @@ function initMap() {
     }
 
   });
-  new MarkerClusterer({ markers, map });
+  //new MarkerClusterer({ markers, map });
 
 //---------- Selector de comunidad -----------
   const selectorComunidades = document.querySelector('#select-comunidades');
@@ -243,24 +244,7 @@ function initMap() {
   })
 
   //---------- fin Selector de comunidad -----------
-
-  // Agregue un agrupador de marcadores para administrar los marcadores.
-  //de momento no cunciona
- // new MarkerClusterer({ markers, map });  // <--- Esta funcion está dando error por consola
-
-  //const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
-
 }
-
-const locations = [
-  {lat: 41.657871, lng: -0.884742},
-  {lat: 40.416713, lng: -3.703528},
-  {lat: 40.416073, lng: -3.690488},
-  {lat: 40.436175, lng: -3.708611},
-  {lat: 40.385249, lng: -3.709435},
-  {lat: 40.451784, lng: -3.681063},
-  {lat: 37.238329, lng: -5.104858},
-]
 
 window.addEventListener("DOMContentLoaded", () => {
   window.initMap = initMap();
