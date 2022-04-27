@@ -713,6 +713,15 @@ h1, h2, h3, h4 {
 .conten-contactos .conten-contactos-element .conten-element-data h2 {
   margin-bottom: 1.5rem;
 }
+@media only screen and (min-width: 1000px) {
+  .conten-contactos {
+    margin-left: 12vw;
+    margin-right: 12vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+}
 
 #imag-contact {
   height: 200px;

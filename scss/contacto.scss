@@ -56,6 +56,13 @@
             
         }
     }
+
+    @media only screen and (min-width: $desktop-breakpoint){
+        @include margenes;
+        display: flex;
+        justify-content: space-around;
+        gap: 5rem;
+    }
 }
 
 #imag-contact{
