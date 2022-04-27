@@ -116,6 +116,10 @@
     z-index: 1000;
 }
 
+.select-div{
+    @include margenes-pequeños;
+}
+
 //-----
 /* input[type=text] {
     background-color: #fff;

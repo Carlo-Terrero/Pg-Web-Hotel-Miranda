@@ -1,3 +1,9 @@
+import {espanaComunidades} from './comunidades.js';
+import {comunidadesAutonomas} from './nameComunidades.js';
+//console.log(comunidadesAutonomas)
+
+//console.log(espanaComunidades[1])
+
 let map, infoWindow, marker, geocoder;
 
 function initMap() {
@@ -7,9 +13,9 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("imag-contact"), {
     zoom: 5,
     center: { lat: 40.416713, lng: -3.703528},
+    //mapTypeId: "terrain",
   });
   geocoder = new google.maps.Geocoder();
-
 
   //infoWindow = new google.maps.InfoWindow()
 
@@ -18,10 +24,8 @@ function initMap() {
       disableAutoPan: true,
   })
 
- 
-
+  //Los elementos añadidos al mapa
   const locationButton = document.createElement("button");
-
   locationButton.textContent = "Find my nearest location";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
@@ -42,6 +46,7 @@ function initMap() {
   clearButton.value = "Clear";
   clearButton.classList.add("button", "button-secondary");
   map.controls[google.maps.ControlPosition.LEFT_TOP].push(clearButton);
+
 
   marker = new google.maps.Marker({
     map,
@@ -169,7 +174,7 @@ function initMap() {
   //Cree una matriz de caracteres alfabéticos utilizados para etiquetar los marcadores.
   const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  //Agregue algunos marcadores al mapa.
+  //Agregue los marcadores al mapa de los hoteles. aquí puede editar el marcador.
   //const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
   
   const markers = locations.map((position, i) => {
@@ -179,7 +184,7 @@ function initMap() {
             path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
             fillColor: "green",
             fillOpacity: 0.6,
-            strokeWeight: 0.3,
+            strokeWeight: 0.7,
             rotation: 0,
             scale: 2,
             anchor: new google.maps.Point(15, 30)
@@ -190,12 +195,11 @@ function initMap() {
     });
 
     // los marcadores solo se pueden enfocar con el teclado cuando tienen detectores de clics
-    // abrir la ventana de información cuando se hace clic en el marcador
     marker.addListener("click", toggleBounce);
 
     marker.addListener("click", () => {
-      infoWindow.setContent(label);
-      infoWindow.open(map, marker);
+      //infoWindow.setContent(label); // abrir la ventana de información cuando se hace clic en el marcado
+      //infoWindow.open(map, marker); // Este parece el causante de de la vetana de infomacion
       console.log(label)
       
     });
@@ -211,11 +215,47 @@ function initMap() {
 
     return marker;
   });
+
+//---------- Selector de comunidad -----------
+  const selectorComunidades = document.querySelector('#select-comunidades');
+  let marcaFroteriza;
+  for(let i = 0; i < comunidadesAutonomas.length; i++ ){
+    let option = document.createElement("option");
+    let text = document.createTextNode(comunidadesAutonomas[i]);
+    option.appendChild(text)
+
+    selectorComunidades.appendChild(option)
+   // console.log(i)
+  }
+
+  selectorComunidades.addEventListener('change', () =>{
+
+    let indexComunidad = selectorComunidades.selectedIndex;
+    
+    marcaFroteriza && marcaFroteriza.setMap(null);
+    
+    //marcaFroteriza && setMap(null)
+
+    marcaFroteriza = new google.maps.Polygon({
+      paths: espanaComunidades[(indexComunidad - 1)],
+      strokeColor: "#FF0000",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#FF0000",
+      fillOpacity: 0.35,
+    });
+
+    marcaFroteriza.setMap(map);
+
+  })
+
+  // Constructor de la comunidad.
+ 
+
     
   // Agregue un agrupador de marcadores para administrar los marcadores.
   //de momento no cunciona
-  new MarkerClusterer({ markers, map });  // <--- Esta funcion está dando error por consola
-
+ // new MarkerClusterer({ markers, map });  // <--- Esta funcion está dando error por consola
 
   //const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
 
