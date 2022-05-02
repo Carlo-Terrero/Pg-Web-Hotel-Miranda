@@ -467,7 +467,7 @@ h1, h2, h3, h4 {
   background-color: #222222;
   display: grid;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
@@ -603,7 +603,6 @@ h1, h2, h3, h4 {
 .footer .container-footer .contact-us {
   display: grid;
   gap: 1rem;
-  justify-content: center;
 }
 .footer .container-footer .contact-us .phone-number {
   display: flex;
@@ -664,10 +663,11 @@ h1, h2, h3, h4 {
   height: 32vh !important;
 }
 
-.margen_inferior {
-  margin-bottom: -3rem;
+@media only screen and (min-width: 1000px) {
+  .altura {
+    height: 42vh !important;
+  }
 }
-
 .indicador {
   display: flex;
   background: #FFFFFF;
@@ -752,7 +752,7 @@ h1, h2, h3, h4 {
   margin: 1rem 0;
 }
 .formulario-contact .btn-normal {
-  margin: 0 auto;
+  margin: 2rem auto 5rem auto;
 }
 
 .custom-map-control-button {
@@ -859,6 +859,14 @@ input[type=button].button-secondary:hover {
     font-size: medium;
 }
  */
+.offers_container .offers-container-img {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  background: #333333;
+  height: 162px;
+  margin-top: 3rem;
+}
+
 .puntos {
   color: #BEAD8E;
   font-size: 3rem;

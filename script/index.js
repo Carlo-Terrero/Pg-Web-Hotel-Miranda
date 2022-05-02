@@ -121,7 +121,8 @@ function initMap() {
           };
 
           service.getDistanceMatrix(request).then((response) => {
-            // put response
+            // put response 
+            // Aqui ponemos las direcciones en pantalla
 
             let distancia = response.rows[0].elements; //array obj con text y value
             let distance = response.rows[0].elements.map(dir => dir.distance.text ); // array de text de momento para hace pruebas
@@ -246,7 +247,5 @@ function initMap() {
   //---------- fin Selector de comunidad -----------
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  window.initMap = initMap();
+window.initMap = initMap();
 
-})
