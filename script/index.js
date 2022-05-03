@@ -47,7 +47,6 @@ function initMap() {
   clearButton.classList.add("button", "button-secondary");
   map.controls[google.maps.ControlPosition.LEFT_TOP].push(clearButton);
 
-
   marker = new google.maps.Marker({
     map,
   });
@@ -71,11 +70,13 @@ function initMap() {
 
   function geocode(request) {
     clear();
+    //localizarDireccion(request);
+    //console.log(request)
     geocoder
       .geocode(request)
       .then((result) => {
         const { results } = result;
-  
+        console.log(result)
         map.setCenter(results[0].geometry.location);
         marker.setPosition(results[0].geometry.location);
         marker.setMap(map);
@@ -87,6 +88,8 @@ function initMap() {
       });
   }
   
+  const service = new google.maps.DistanceMatrixService();
+
   //boton y modulo para geolocalizacion
   //Tenemos que maquetar el señalizador que representa al usuario
   locationButton.addEventListener("click", () => {
@@ -105,7 +108,7 @@ function initMap() {
           map.setCenter(pos);
 
           // initialize services
-          const service = new google.maps.DistanceMatrixService();
+          //const service = new google.maps.DistanceMatrixService();
           // build request
           //const origin1 = { lat: 55.93, lng: -3.118 };
           /*  const origin2 = "Greenwich, England";
@@ -120,7 +123,9 @@ function initMap() {
             avoidTolls: false,
           };
 
-          service.getDistanceMatrix(request).then((response) => {
+          localizarDireccion(request);
+
+         /*  service.getDistanceMatrix(request).then((response) => {
             // put response 
             // Aqui ponemos las direcciones en pantalla
 
@@ -137,7 +142,7 @@ function initMap() {
               //document.getElementById("response").innerHTML += distance[i] + '<br>'
               document.getElementById("sidebar").innerHTML += `<p>${complet[i].dir}  a ${complet[i].distance.text}</p> <br>` 
             }
-          });
+          }); */
 
         },
 
@@ -152,6 +157,37 @@ function initMap() {
     }
   });
   //------ FIN boton y modulo para geolocalizacion
+
+
+  //funcion que indica la distancia que hay desde el cliente a los hoteles
+
+  function localizarDireccion(request){
+    console.log(request)
+    service.getDistanceMatrix(request).then((response) => {
+      console.log(response)
+      // put response 
+      // Aqui ponemos las direcciones en pantalla
+
+      let distancia = response.rows[0].elements; //array obj con text y value
+      let distance = response.rows[0].elements.map(dir => dir.distance.text ); // array de text de momento para hace pruebas
+      let val = response.rows[0].elements.map(dir => dir.distance.value );
+      let direccionHoteles = response.destinationAddresses; // array de las direcciones
+
+      let complet = distancia.map((p, i) =>{
+        return {...p, 'dir': direccionHoteles[i]}
+      })
+
+      for(let i = 0 ; i < complet.length; ++i){
+        //document.getElementById("response").innerHTML += distance[i] + '<br>'
+        document.getElementById("sidebar").innerHTML += `<p>${complet[i].dir}  a ${complet[i].distance.text}</p> <br>` 
+      }
+    });
+  }
+
+
+
+
+
 
   //------------ matriz de distancia ----------------
 
@@ -188,7 +224,7 @@ function initMap() {
             },
         position,
         map,
-        label,
+        //label,
         animation: google.maps.Animation.DROP,
     });
 
