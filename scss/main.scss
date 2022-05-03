@@ -2,13 +2,12 @@ body,
 p,
 h1,h2,h3,h4{
     margin: 0;
+    padding: 0;
 }
 
 .mag-rigth{
     margin-right: 12vw;
 }
-
-
 
 @import "./variable";
 @import "./mixings.scss";
@@ -16,6 +15,9 @@ h1,h2,h3,h4{
 @import "./home.scss";
 @import "./btn.scss";
 @import "./footer.scss";
+@import "./about.scss";
+@import "./contacto.scss";
+@import "./offers.scss";
 
 .puntos{
     color: $crema;

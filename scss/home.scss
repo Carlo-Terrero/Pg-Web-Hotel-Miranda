@@ -5,11 +5,9 @@
     .container-element{
         display: grid;
         columns: 1fr;
-        background-color: $dark-grey;
         color: $neutro;
         height: 63vh;
-        margin-left: 5vw;
-        margin-right: 10vw;
+        margin: 0 10vw 0 5vw;
         
         .container-intro{
             padding-top: 10vh;
@@ -25,6 +23,8 @@
         .container-btn{
             padding-bottom: 2vh;
         }
+
+        
 
         @media only screen and (min-width: $desktop-breakpoint){
             //aqui va el mixing para los bordes
@@ -43,8 +43,6 @@
               
         }
     }
-
-   
 
 }
 
@@ -423,7 +421,7 @@
 //Menu
 .container-menu{
     margin-top: 11rem;
-    @include margenes-pequños;
+    @include margenes-pequeños;
 
     .encabezado-menu{
         color: $letra-grey;
@@ -530,7 +528,7 @@
     background-color: $black;
     display: grid;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1.5rem;

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/9cb55a2a50.js" crossorigin="anonymous"></script> -->
+    <title>Document</title>
+    <!--Esto es para los iconos-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- api de maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeweEJ65TgzfQ5y849gcFMx6fRsW0d1lo&callback=initMap" ></script>
+    
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script> 
+
+    <!-- Las script -->    
+    <script type="module" src="./script/index.js"></script>
+   
+</head>
+<body>
+    <div class="Nav-Bar">
+        <!-- <i class='fas fa-times'></i> -->
+        <i class="fas fa-bars" id="burguer"></i> 
+
+        <div class="left">
+            
+            <h1 class="left-H">H</h1>
+            <p>Hotel <br/> Miranda</p>
+        </div>
+
+        <div class="container-menu">
+            <a href="./about.html">About Us</a>
+            <a href="./rooms.html">Rooms</a>
+            <a href="./offers.html">Offers</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+
+        <div class="right">            
+            <i class='far fa-user'  ></i>
+            <i class='fas fa-search'> </i>
+        </div>
+    </div>
+    
+    <div class="intro-container ">
+        <div class="container-element altura ">
+            <div class="container-intro margen_inferior">
+                THE ULTIMATE LUXURY 
+            </div>
+            
+            <div class="container-title">
+                <h1> New Details </h1>
+            </div>
+
+            <div class="indicador">
+                <a href="./index.html">Home</a>
+                |
+                <p>Blog</p>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="conten-contactos">
+        <div class="conten-contactos-element" style="background-image: url(./assets/svg/01-contact.png)">
+            <img class="contact-imagen" src="./assets/svg/icon 9.png" alt="icono de un sobre">
+
+            <div class="conten-element-data">
+                <h2>Hotel Address</h2>
+
+                <p>19/A, Cirikon City hall Tower New York, NYC</p>
+            </div>
+            
+
+        </div>
+
+        <div class="conten-contactos-element" style="background-image: url(./assets/svg/02-contact.png)">
+            <img class="contact-imagen" src="./assets/svg/svg-gobbler - 2022-03-02T152425.400 1.png" alt="icono de un sobre">
+
+            <div class="conten-element-data">
+                <h2>Phone Numbre</h2>
+
+                <p>+976 568 675 7864 7</p>
+                <p>+876 766 8675 765 6</p>
+            </div>
+
+        </div>
+
+        <div class="conten-contactos-element" style="background-image: url(./assets/svg/03-contact.png)">
+            <img class="contact-imagen" src="./assets/svg/icon 10.png" alt="icono de un sobre">
+
+            <div class="conten-element-data">
+                <h2>Email</h2>
+
+                <p>info@webmail.com</p>
+                <p>jobs.webmail@mail.com</p>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="select-div">
+        <select id="select-comunidades">
+            <option value=""  selected>Agrupar por comunidades</option>
+        </select>
+    </div>
+    <div id="imag-contact">
+        
+    </div>
+    <div id="sidebar">
+        
+    </div>
+
+    <form class="formulario-contact">
+        <input type="text" name="name" id="tel" placeholder="Your full name">
+
+        <input type="tel" name="tel" id="tel" placeholder="Add phone number">
+
+        <input type="mail" name="mail" id="mail" placeholder="Enter subject">
+
+        <input type="text" name="subject" id="subject" placeholder="Enter subject">
+
+        <input type="textArea" name="area" id="area" placeholder="Enter message" aria-multiline="true">
+
+        <button class="btn-normal ">SEND</button>
+
+    </form>
+
+    <footer class="footer img-control">
+        <div class="container-footer">
+            <div class="intro">
+                <div class="footer-encabezado">
+                    <div class="footer-logo-h">
+                        <h1>
+                            H
+                        </h1>
+                    </div>                
+
+                    <div class="footer-name">
+                        <p>
+                            <b>HOTEL</b> <br/> MIRANDA
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="footer-content-intro">
+                    <p>
+                        Lorem ipsum dolor sit amet, consect etur adipisicing 
+                        elit, sed doing eius mod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitat ion ullamco laboris nisi.
+                    </p>
+                </div>
+                
+
+                <div class="icon-marcas">
+
+                    <div> <i class='fab fa-facebook-square'></i> </div>
+                    <div> <i class='fab fa-twitter-square'></i> </div>
+                    <div> <i class='fab fa-behance-square'></i> </div>
+                    <div> <i class='fab fa-linkedin'></i> </div>
+                    <div> <i class='fab fa-youtube-square'></i> </div>
+                    
+                </div>
+            </div>
+
+            <div class="footer-services">
+
+                <div class="services-left">
+
+                    <h1 class="footer-title">
+                        Services.
+                    </h1>
+
+                    <div class="contain-service-colum">
+                        <div class="services-colum">
+                            <p>+ Resturent & Bar</p>
+                            <p>+ Swimming Pool</p>
+                            <p>+ Wellness & Spa</p>
+                            <p>+ Restaurant</p>
+                            <p>+ Conference Room</p>
+                            <p>+ Coctail Party House</p>
+                        </div>
+        
+                        <div class="services-colum">
+                            <p>+ Gaming Zone</p>
+                            <p>+ Marrige Party</p>
+                            <p>+ Party Planning</p>
+                            <p>+ Tour Consultancy</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="contact-us">
+                <div class="footer-title">
+                    <h1>
+                        Contact Us.
+                    </h1>
+                </div>
+
+                <div class="phone-number">
+                    <div class="icon-contact">
+                        <img src="./assets/svg/svg-gobbler - 2022-03-02T152425.400 1.png" alt="">
+                    </div>
+
+                    <div class="content-phone-number">
+                        <div class="content-text">
+                            <h3>
+                                Phone Number
+                            </h3>
+                        </div>
+
+                        <div class="content-number">                        
+                            +629 228 654
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-number">
+                    <div class="icon-contact">
+                        <img src="./assets/svg/icon 9.png" alt="">
+                    </div>
+
+                    <div class="content-phone-number">
+                        <div class="content-text">
+                            <h3>
+                                Phone Number
+                            </h3>
+                        </div>
+
+                        <div class="content-number">                        
+                            +629 228 654
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-number">
+                    <div class="icon-contact">
+                        <img src="./assets/svg/icon 10.png" alt="">
+                    </div>
+
+                    <div class="content-phone-number">
+                        <div class="content-text">
+                            <h3>
+                                Phone Number
+                            </h3>
+                        </div>
+
+                        <div class="content-number">                        
+                            +629 228 654
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-line">
+            <div class="container-info-line">
+                <div class="left">
+                    <b>Copyright By@Example - 2020</b> 
+                 </div>
+     
+                 <div class="right">                
+                     <b>Terms of use | Privacy Environmental Policy</b> 
+                 </div>
+            </div>           
+        </div>
+
+    </footer>
+
+</body>
+</html>
