@@ -1,11 +1,26 @@
 .offers_container{
     //@include margenes;
    // margin: 0 auto 0 auto;
-    .offers-container-img{
-        @include margenes-pequeños;
-        background: $dark-grey;
-        //width: 300px;
-        height: 162px;
-        margin-top: 3rem;
+   @include margenes-pequeños;
+   display: grid;
+   gap: 1rem;
+   border: 1px solid black;
+   
+   .offers-container-img{
+       background: #bdbdbd82;
+       //width: 300px;
+       height: 162px;
+       //margin-top: 3rem;
     }
+
+   .container-container{
+        @include margenes-pequeños;
+        display: grid;
+        gap: 1rem;
+
+        button{
+            margin-bottom: 1rem;
+        }
+    }
+
 }

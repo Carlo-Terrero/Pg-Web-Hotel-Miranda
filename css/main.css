@@ -375,7 +375,6 @@ h1, h2, h3, h4 {
   .img-galleta-s {
     display: none;
   }
-
   .img-galleta-b {
     display: flex;
   }
@@ -749,7 +748,12 @@ h1, h2, h3, h4 {
 }
 .formulario-contact input {
   border: none;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  background-color: #F8F8F8;
+  padding: 1.5rem;
+}
+.formulario-contact #area {
+  padding-bottom: 8rem;
 }
 .formulario-contact .btn-normal {
   margin: 2rem auto 5rem auto;
@@ -859,12 +863,25 @@ input[type=button].button-secondary:hover {
     font-size: medium;
 }
  */
-.offers_container .offers-container-img {
+.offers_container {
   margin-left: 4vw;
   margin-right: 4vw;
-  background: #333333;
+  display: grid;
+  gap: 1rem;
+  border: 1px solid black;
+}
+.offers_container .offers-container-img {
+  background: rgba(189, 189, 189, 0.5098039216);
   height: 162px;
-  margin-top: 3rem;
+}
+.offers_container .container-container {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  display: grid;
+  gap: 1rem;
+}
+.offers_container .container-container button {
+  margin-bottom: 1rem;
 }
 
 .puntos {

@@ -13,8 +13,6 @@
     }
 }
 
-
-
 .indicador{
     display: flex;
     background: $neutro;
@@ -99,10 +97,15 @@
     display: grid;
     @include margenes-pequeños;
     
-
     input{
         border: none;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
+        background-color: #F8F8F8;
+        padding: 1.5rem;
+    }
+
+    #area{
+        padding-bottom: 8rem;
     }
 
     .btn-normal{
