@@ -19,3 +19,6 @@ export const comunidadesAutonomas = [
     'Ceuta',
     'Melilla',
 ];
+
+// para iniciar sass
+// sass --watch ./scss/main.scss ./css/main.css

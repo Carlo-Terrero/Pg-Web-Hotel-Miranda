@@ -134,7 +134,11 @@
     .bloques-ford{
     
         .block-top{        
-            margin-top: -7rem;
+            margin-top: 0;
+            
+            @media only screen and ( min-width: $desktop-breakpoint) {
+                margin-top: -7rem;
+            }
         }
     
         .block-white{
@@ -259,6 +263,10 @@
 
 }
 
+.container-slider-hand{
+    width: 100%;
+    height: 250px;
+}
 
 //Intro video
 .intro-video{
@@ -336,9 +344,9 @@
 
 //FACILITIES
 .facilities{
+    @include margenes;
     display: grid;
     justify-content: center;
-    align-items: center;
     text-align: center;
     margin-top: 3rem;
 
@@ -349,6 +357,7 @@
     .title-facil{
         font-size: 1.7rem;
         padding-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     .container-facil{
@@ -356,9 +365,11 @@
         justify-content: start;
         align-items: start;
         text-align: start;
+        grid-template-columns: 1fr 1fr 1fr;
 
-        .facilities-individula{
+        gap: 6rem;
 
+        .facilities-individua{
 
             .img-container{
                 
@@ -432,34 +443,53 @@
         margin-bottom: 2rem;
     }
 
-    .lista-menu{
+    .container-list-menu{
         display: grid;
-        gap: 1rem;
-        
-        .plato{
+        .lista-menu{
             display: grid;
-            gap: 3rem;
-            grid-template-columns: 120px 1fr;
+            gap: 1rem;
+            
+            .plato{
+                display: grid;
+                gap: 3rem;
+                grid-template-columns: 120px 1fr;
 
-            .img-plato{
-                display:block;
-                width: 120px;
-                height: 120px;
-                background-color: $color-img;
-            }
+                .img-plato{
+                    display:block;
+                    width: 120px;
+                    height: 120px;
+                    background-color: $color-img;
+                }
 
-            .descrip-plato{
-                gap: 1rem;
+                .descrip-plato{
+                    gap: 1rem;
 
-                .title-descrip-plato{
-                    color: $black;
-                    font-size: 0.9rem;
-                    margin-bottom: 1rem;
+                    .title-descrip-plato{
+                        color: $black;
+                        font-size: 0.9rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                    }
                 }
             }
+
+            .plato:hover{
+                background-color: rgb(17, 16, 16);
+                color: whitesmoke;
+
+                .title-descrip-plato{
+                    color: whitesmoke;
+                }
+            }
+
         }
 
+        @media only screen and (min-width: $desktop-breakpoint) {
+            display: flex;
+            gap: 10px;
+        }
     }
+
     
     .flechas-direc-menu{
         display: flex;
@@ -467,27 +497,19 @@
         text-align: center;
         gap: 1rem;
         margin-top: 1rem;
-
-        .arrow-left{
-            background-color: $grey;
-        }
+        margin-bottom: 3rem;
     }
+
+    // .flechas-direc-menu:hover{
+    //     background-color: $crema;
+    //     color: $neutro;
+    // }
 
     #flechas-top{
         display: none;
         position: relative;
     }
-
-    .img-menu-big{
-        height: 335px;
-        width: 358px;
-        background-color: $grey;
-        margin-top: 3.5rem;
-    }
-
-    .tres-puntos{
-        text-align: center;
-    }    
+  
 
     @media only screen and (min-width: $desktop-breakpoint){
         @include margenes;
@@ -515,25 +537,97 @@
             margin-bottom: 4rem;
         }
 
-        .tres-puntos{
-            display: none;           
-        }
     }
 
 }
 
+
+.carrucel-img-footer{
+    display: none;
+    // @include margenes;
+    // margin-bottom: 3rem;
+
+    // .container-carrucel-img-footer{
+    //     display: grid;
+    //     grid-template-columns: auto auto auto;
+    //     justify-content: space-between;
+    
+    //     .img-menu-big{
+    //         height: 335px;
+    //         width: 358px;
+    //         margin-top: 3.5rem;
+    //     }
+    // }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        @include margenes;
+        display: flex;
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+    
+        .img-menu-big{
+            height: 335px;
+            width: 358px;
+            margin-top: 3.5rem;
+        }
+    } 
+    
+}
+
+.carrucel-footer{
+    display: grid;
+    @include margenes;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    @media only screen and (min-width: $desktop-breakpoint) {
+        display: none;
+        // @include margenes;
+    } 
+}
+
+.container-btn-carrucel{
+    display: flex;
+    margin-top: 1rem;
+    gap: 0.5em;
+    justify-content: center;
+    
+    .btn-point{
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        border:none;
+    }
+
+    .btn-point:hover{
+        background-color: $crema;
+    }
+
+    .point{
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        display: none;
+        // @include margenes;
+    } 
+
+}
 
 //Contenedor Negro
 .container-information{
     background-color: $black;
     display: grid;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     margin-bottom: 4rem;
-
 
     .container-num{
         display: flex;

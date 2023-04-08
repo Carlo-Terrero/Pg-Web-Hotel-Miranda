@@ -2,12 +2,17 @@ body,
 p,
 h1,h2,h3,h4{
     margin: 0;
-    padding: 0;
+    padding: 0;    
+}
+
+.body{
+    background-color: #E5E5E5;
 }
 
 .mag-rigth{
     margin-right: 12vw;
 }
+
 
 @import "./variable";
 @import "./mixings.scss";
@@ -24,11 +29,21 @@ h1,h2,h3,h4{
     font-size: 3rem;
 }
 
-.arrow-left{
+.btn-selected{
+    background-color: $crema;
+}
+
+.arrow{
     width: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background-color: $neutro;
+    background-color: $grey;
+}
+
+.arrow:hover{
+    background-color: $crema;
+    color: $neutro;
 }
 
 .arrow-right{
