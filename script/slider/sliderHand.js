@@ -1,6 +1,5 @@
 class SliderHand{
     containerImg = document.getElementById('test');
-    // listButtons = document.getElements
     timer;
     index = 0;
 
@@ -24,14 +23,6 @@ class SliderHand{
         ]
 
         this.handleChange();
-
-        // this.prevButton.addEventListener('click', () => {
-        //     this.prevElement();
-        // })
-
-        // this.nextsButton.addEventListener('click', () => {
-        //     this.nextElement();
-        // })
     }
 
     handleChange(){
@@ -39,7 +30,6 @@ class SliderHand{
         this.index ++;
         this.handleTimeChange();
         if(this.index >= this.img.length) this.index = 0;
-
     }
 
     handleTimeChange(){
@@ -67,5 +57,3 @@ class SliderHand{
 }
 
 new SliderHand;
-
-// https://images.unsplash.com/photo-1578683010236-d716f9a3f461?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMDY3NzJ8MHwxfHNlYXJjaHwzNnx8cm9vbSUyMGhvdGVsfGVufDB8fHx8MTY3Mzc5MjMzMg&ixlib=rb-4.0.3&q=80&w=400
