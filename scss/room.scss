@@ -1,0 +1,99 @@
+#container-rooms{
+    // padding: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    @include margenes-pequeños;
+
+    .room{
+        width: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        .img_room{
+            width: 100%;
+            height: 15rem;
+        }
+
+        .container-pgn{
+            display: flex;
+            gap: 0.8rem;
+            padding: 1rem;
+            margin-top: -1.5rem;
+            margin-bottom: 1rem;
+            background-color: white;
+            box-shadow:  2px 2px 40px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-detail{
+            width: 100%;
+            
+            // .cabecera-detail{
+                
+            // }
+        
+            .adquire-room{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+                gap: 1rem;
+                
+                .precio-detail{
+                    color: $crema;
+                }
+
+                .btn-adquire{
+                    border: none;
+                    background: none;
+                    color: $letra-grey;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                }
+
+                .btn-adquire:hover{
+                    background: $crema;
+                    color: $live-grey;
+                    border-radius: 3px;
+                }
+                
+            }
+        }
+    }
+
+}
+
+.container-pagination{
+    display: flex;
+    justify-content: center;
+
+    .btn-pages{
+        border: none;
+        background: none;
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-pages:hover{
+        cursor: pointer;
+        background-color: $crema;
+        color: $neutro;
+    }
+}
+
+@media only screen and (min-width: $desktop-breakpoint){
+    #container-rooms{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    }
+}
+// .img_room{
+//     width: 25rem;
+//     height: 20rem;
+// }
+// 

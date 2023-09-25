@@ -6,3 +6,8 @@
     font-size: 3rem;
     color: red;
 }
+
+.video_seccion{
+    @include margenes;
+    margin-top: 9vh;
+}

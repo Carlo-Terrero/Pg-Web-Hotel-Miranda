@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://kit.fontawesome.com/9cb55a2a50.js" crossorigin="anonymous"></script> -->
-    <title>Document</title>
+    <title>Hotel Miranda</title>
     <!--Esto es para los iconos-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 
-    <script type="module" src="./script/connectionApi.js"></script>
 </head>
 <body>
     <div class="Nav-Bar">
@@ -31,28 +31,16 @@
             <a href="./contact.html">Contact</a>
         </div>
 
-        <div class="right">            
-            <i class='far fa-user'  ></i>
-            <i class='fas fa-search'> </i>
-        </div>
     </div>
     
-    <div class="intro-container">
-        <div class="container-element">
-            <div class="container-intro">
+    <div class="intro-container ">
+        <div class="container-element altura ">
+            <div class="container-intro margen_inferior">
                 THE ULTIMATE LUXURY EXPERIENCE
             </div>
             
             <div class="container-title">
-                <h1>The Perfect <br/>
-                    Base For You
-                </h1>
-            </div>
-
-            <div Class="container-btn">
-                <button class="btn-normal mlb">TAKE A TOUR</button>
-
-                <button class="btn-oscuro">LEARN MORE</button>
+                <h2>The Rooms</h2>
             </div>
 
             <div class="indicador">
@@ -66,12 +54,81 @@
 
     </div>
 
-    <section>
+    <section id="container-rooms">
+        
+        <!-- <div class="room">
+
+            <img 
+                src="https://images.unsplash.com/photo-1593006526979-5f8814c229f9" 
+                class="img_room"
+                alt="img room" 
+            >
+            
+            <div class="container-pgn">
+                <div>
+                    <img src="./assets/svg/8725460_bed_icon 1.png" alt="">            
+                </div>
+    
+                <div>
+                    <img src="./assets/svg/925808_wifi_icon 1.png" alt="">
+                </div>
+    
+                <div>
+                    <img src="./assets/svg/4920723_automobile_car_transport_transportation_travel_icon 1.png" alt="">            
+                </div>
+    
+                <div>
+                    <img src="./assets/svg/384878_cold_new year_snowflake_wheather_winter_icon 1.png" alt="">
+                </div>
+    
+                <div>
+                    <img src="./assets/svg/9042522_gym_icon 1.png" alt="">
+                </div>
+    
+                <div>
+                    <img src="./assets/svg/9081473_smoking_no_icon 1.png" alt="">
+                </div>
+                
+                <div>
+                    <img src="./assets/svg/6623006_cocktail_drink_holidays_summer_vacation_icon 1.png" alt="">
+                </div>            
+                
+            </div>
+    
+            <div class="container-detail">
+    
+                <h1 class="cabecera-detail">
+                    Minimal Duplex Room
+                </h1>
+    
+                <p>
+                    Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit, 
+                    sed do eiusmod tempor incididunt 
+                    ut labore et dolore.
+                </p>
+    
+                <div class="adquire-room">
+                    <p class="precio-detail">
+                        $345/Night
+                    </p>
+
+                    <button class="btn-adquire">
+                        <strong> Booking Now </strong>
+                    </button>
+                </div>
+    
+            </div>
+        </div> -->
         
     </section>
 
 
-
+    <section class="container-pagination">
+        <button class="btn-pages" id="btn-left"><<</button>
+        <div class="container-pages"></div>
+        <button class="btn-pages" id="btn-rigt">>></button>
+    </section>
 
 
     <footer class="footer img-control">
@@ -223,4 +280,7 @@
     </footer>
     
 </body>
+
+<script type="module" src="./script/connectionApi.js"></script>
+
 </html>

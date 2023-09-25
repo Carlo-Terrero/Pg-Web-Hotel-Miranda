@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
 .intro-container .container-element .container-intro {
   padding-top: 10vh;
 }
-.intro-container .container-element .container-title h1 {
+.intro-container .container-element .container-title h1, .intro-container .container-element .container-title h2 {
   font-size: 6.5vh;
 }
 .intro-container .container-element .container-btn {
@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
   }
-  .intro-container .container-element .container-title h1 {
+  .intro-container .container-element .container-title h1, .intro-container .container-element .container-title h2 {
     font-size: 12vh;
   }
 }
@@ -233,7 +233,7 @@ h1, h2, h3, h4 {
   display: flex;
   width: 256px;
   height: 40px;
-  background-color: #FFFFFF;
+  background-color: red;
   margin-left: 17vw;
   margin-top: 2rem;
   margin-bottom: -1rem;
@@ -244,12 +244,14 @@ h1, h2, h3, h4 {
 }
 .rooms .corredor-img {
   height: 244px;
-  background-color: #E5E5E5;
+  width: 95%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .rooms .corredor-img .flechas-direc {
   display: flex;
   position: relative;
-  margin-top: 7rem;
+  z-index: 111;
   justify-content: space-around;
 }
 .rooms .container-detail {
@@ -377,6 +379,34 @@ h1, h2, h3, h4 {
 }
 .facilities .container-facil .facilities-individua .facil-content {
   margin-bottom: 0.5rem;
+}
+
+.black_facilities {
+  background: #222222;
+  margin: 0;
+  padding: 8vh 0;
+}
+.black_facilities .encabezado-facil {
+  color: #FFFFFF;
+}
+.black_facilities .title-facil {
+  color: #FFFFFF;
+}
+.black_facilities .container-facil {
+  gap: 3rem;
+}
+.black_facilities .container-facil .facilities-individual {
+  background: #333333;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 20px;
+}
+.black_facilities .container-facil .facilities-individual .facil-title {
+  color: #FFFFFF;
+  margin: 1rem 0;
+}
+.black_facilities .container-facil .facilities-individual .facil-content {
+  color: #FFFFFF;
 }
 
 .img-galleta-b {
@@ -739,6 +769,12 @@ h1, h2, h3, h4 {
   color: red;
 }
 
+.video_seccion {
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 9vh;
+}
+
 .altura {
   height: 32vh !important;
 }
@@ -1077,6 +1113,84 @@ input[type=button].button-secondary:hover {
   background-color: #ffffff;
 }
 
+#container-rooms {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+#container-rooms .room {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#container-rooms .room .img_room {
+  width: 100%;
+  height: 15rem;
+}
+#container-rooms .room .container-pgn {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 40px 1px rgba(0, 0, 0, 0.1);
+}
+#container-rooms .room .container-detail {
+  width: 100%;
+}
+#container-rooms .room .container-detail .adquire-room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+#container-rooms .room .container-detail .adquire-room .precio-detail {
+  color: #BEAD8E;
+}
+#container-rooms .room .container-detail .adquire-room .btn-adquire {
+  border: none;
+  background: none;
+  color: #777777;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+#container-rooms .room .container-detail .adquire-room .btn-adquire:hover {
+  background: #BEAD8E;
+  color: #F8F8F8;
+  border-radius: 3px;
+}
+
+.container-pagination {
+  display: flex;
+  justify-content: center;
+}
+.container-pagination .btn-pages {
+  border: none;
+  background: none;
+  width: 60px;
+  height: 60px;
+}
+.container-pagination .btn-pages:hover {
+  cursor: pointer;
+  background-color: #BEAD8E;
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width: 1000px) {
+  #container-rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+}
 .puntos {
   color: #BEAD8E;
   font-size: 3rem;
@@ -1088,6 +1202,7 @@ input[type=button].button-secondary:hover {
 
 .arrow {
   width: 2rem;
+  height: 1.2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #FFFFFF;

@@ -23,6 +23,7 @@ h1,h2,h3,h4{
 @import "./about.scss";
 @import "./contacto.scss";
 @import "./offers.scss";
+@import "./room.scss";
 
 .puntos{
     color: $crema;
@@ -35,6 +36,7 @@ h1,h2,h3,h4{
 
 .arrow{
     width: 2rem;
+    height: 1.2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background-color: $neutro;
