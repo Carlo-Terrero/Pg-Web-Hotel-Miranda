@@ -46,9 +46,9 @@
             </div>
 
             <div Class="container-btn">
-                <button class="btn-normal mlb">TAKE A TOUR</button>
+                <button class="btn-normal mlb" onclick="aboutNavigate('contact')">TAKE A TOUR</button>
 
-                <button class="btn-oscuro">LEARN MORE</button>
+                <button class="btn-oscuro more" onclick="aboutNavigate('about')">LEARN MORE</button>
             </div>
             
         </div>
@@ -56,7 +56,7 @@
     </div>
 
     <!-- CONTENEDOR DEL CALENDARIO -->
-    <div class="container-fecha">
+    <!-- <div class="container-fecha">
         
         <div class="container-fecha-contenido">
 
@@ -90,7 +90,7 @@
             
         </div>
 
-    </div>
+    </div> -->
 
     <!-- container about-us -->
     <div class="container-container">
@@ -113,15 +113,15 @@
                 ex ea commodo consequat.</p>
             </div>
     
-            <button class="btn-normal">BOOK NOW</button>
+            <button class="btn-normal" onclick="aboutNavigate('rooms')">
+                BOOK NOW
+            </button>
     
             
         </div>
     
         <div class="bloques-ford">
-            <!-- <div class="block block-top" style=""> -->
-                <img class="block block-top" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMDY3NzJ8MHwxfHNlYXJjaHwxMHx8cm9vbSUyMGhvdGVsfGVufDB8fHx8MTY3Mzc5MTc2MQ&ixlib=rb-4.0.3&q=80&w=400" alt="image room">
-            <!-- </div> -->
+            <img class="block block-top" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMDY3NzJ8MHwxfHNlYXJjaHwxMHx8cm9vbSUyMGhvdGVsfGVufDB8fHx8MTY3Mzc5MTc2MQ&ixlib=rb-4.0.3&q=80&w=400" alt="image room">
     
             <div class="block block-white">
             
@@ -280,11 +280,11 @@
             </div>
 
             <div class="container-reproductor">
-                <h1>Video aqui</h1>
+                <!-- width="100%" height="315" -->
+                <iframe  width="100%" height="315" src="https://www.youtube.com/embed/Bu3Doe45lcU?si=QgQLyHq_KDP79lXQ&amp;start=25&amp;end=75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
-            
-            <button class="btn-normal btn-video">
+            <button class="btn-normal btn-video" onclick="aboutNavigate('rooms')">
                 BOOK NOW
             </button>
             
@@ -304,7 +304,7 @@
         </div>
 
         <div class="container-facil">
-            <div class="facilities-individual">
+            <div class="facilities-individual view-feature">
 
                 <div  id="test" class="corredor-img">
                     <img class="icon-img" src="./assets/svg/icon 1.png" alt="">
@@ -323,7 +323,7 @@
 
             </div>           
 
-            <div class="facilities-individual">
+            <div class="facilities-individual  view-feature">
 
                 <div class="img-container">
                     <img class="icon-img" src="./assets/svg/icon 2.png" alt="">
@@ -342,7 +342,7 @@
 
             </div>          
 
-            <div class="facilities-individual">
+            <div class="facilities-individual  view-feature">
 
                 <div class="img-container">
                     <img class="icon-img" src="./assets/svg/svg-gobbler - 2022-03-02T121743.699 1.png" alt="">
@@ -361,7 +361,7 @@
 
             </div>          
 
-            <div class="facilities-individual">
+            <div class="facilities-individual view-feature">
 
                 <div class="img-container">
                     <img class="icon-img" src="./assets/svg/icon 3.png" alt="">
@@ -380,7 +380,7 @@
 
             </div>          
 
-            <div class="facilities-individual">
+            <div class="facilities-individual view-feature">
 
                 <div class="img-container">
                     <img class="icon-img" src="./assets/svg/Vector (3).png" alt="">
@@ -399,7 +399,7 @@
 
             </div>          
 
-            <div class="facilities-individual">
+            <div class="facilities-individual view-feature">
 
                 <div class="img-container">
                     <img class="icon-img" src="./assets/svg/svg-gobbler - 2022-03-02T124650.380 1.png" alt="">
@@ -824,5 +824,8 @@
 
 <script src="script/slider/sliderThreeElement.js"></script>
 <script src="script/slider/sliderHand.js"></script>
+<script src="script/handleBtn.js"></script>
+<script src="script/home.js"></script>
+
 
 </html>

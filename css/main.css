@@ -233,8 +233,8 @@ h1, h2, h3, h4 {
   display: flex;
   width: 256px;
   height: 40px;
-  background-color: red;
-  margin-left: 17vw;
+  background-color: white;
+  margin-left: 22%;
   margin-top: 2rem;
   margin-bottom: -1rem;
   position: relative;
@@ -244,15 +244,16 @@ h1, h2, h3, h4 {
 }
 .rooms .corredor-img {
   height: 244px;
-  width: 95%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .rooms .corredor-img .flechas-direc {
   display: flex;
   position: relative;
+  margin-top: 7rem;
   z-index: 111;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .rooms .container-detail {
   display: grid;
@@ -261,7 +262,7 @@ h1, h2, h3, h4 {
   width: 335px;
   height: 215px;
   background-color: #FFFFFF;
-  margin-left: 7vw;
+  margin-left: 3vw;
   margin-top: -1.5rem;
 }
 .rooms .container-detail p {
@@ -407,6 +408,16 @@ h1, h2, h3, h4 {
 }
 .black_facilities .container-facil .facilities-individual .facil-content {
   color: #FFFFFF;
+}
+
+.view-feature {
+  display: none;
+}
+@media only screen and (min-width: 1000px) {
+  .view-feature {
+    background-color: aqua;
+    display: block;
+  }
 }
 
 .img-galleta-b {
@@ -760,8 +771,11 @@ h1, h2, h3, h4 {
   }
 }
 
-.prueba {
-  background: rebeccapurple;
+.sub-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 #pic:focus ~ .hola {
@@ -986,10 +1000,15 @@ input[type=button].button-secondary:hover {
   display: grid;
   gap: 1rem;
   margin-top: 2rem;
+  background: #F8F8F8;
 }
 .offers_container .offers-container-img {
   background: rgba(189, 189, 189, 0.5098039216);
-  height: 162px;
+  height: 500px;
+  width: 80vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .offers_container .offers-container-img .container-precios .precio-actual {
   font-size: 1.5rem;
@@ -1021,12 +1040,26 @@ input[type=button].button-secondary:hover {
   font-size: 2.5rem;
 }
 .offers_container .container-container .offers-container-description {
+  display: flex;
   color: #777777;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.offers_container .container-container .offers-container-description .descrip-room {
+  max-width: 750px;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1000px) {
+  .offers_container .container-container .offers-container-description {
+    flex-direction: row;
+  }
 }
 
 .container-extras {
   display: flex;
   justify-content: space-between;
+  gap: 3rem;
+  max-width: 280px;
 }
 .container-extras .container-extra-data p {
   margin: 0.5rem 0;
@@ -1127,6 +1160,7 @@ input[type=button].button-secondary:hover {
   align-items: center;
   text-align: center;
   margin-bottom: 1.5rem;
+  background: #F8F8F8;
 }
 #container-rooms .room .img_room {
   width: 100%;

@@ -213,8 +213,8 @@
         display: flex;
         width: 256px;
         height: 40px;
-        background-color: red;
-        margin-left: 17vw;
+        background-color: white;
+        margin-left: 22%;
         margin-top: 2rem;
         margin-bottom: -1rem;
         position: relative;
@@ -225,17 +225,16 @@
 
     .corredor-img{
         height: 244px;
-        width: 95%;
-        // background-image: url("https://images.unsplash.com/photo-1507038772120-7fff76f79d79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMDY3NzJ8MHwxfHNlYXJjaHwyNnx8cm9vbSUyMGhvdGVsfGVufDB8fHx8MTY3Mzc5MjE3Mw&ixlib=rb-4.0.3&q=80&w=400");
+        width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         
         .flechas-direc{
             display: flex;
             position: relative;
-            // margin-top: 7rem;
+            margin-top: 7rem;
             z-index: 111;
-            justify-content: space-around;
+            justify-content: space-between;
         }
     }
 
@@ -246,7 +245,7 @@
         width: 335px;
         height: 215px;
         background-color: $neutro;
-        margin-left: 7vw;
+        margin-left: 3vw;
         margin-top: -1.5rem;
 
         p{
@@ -429,7 +428,7 @@
             padding: 2rem;
             gap: 1rem;
             border-radius: 20px;
-
+            
             .facil-title{
                 color: $neutro;
                 margin: 1rem 0;
@@ -439,6 +438,16 @@
                 color: $neutro;
             }
         }
+    }
+}
+
+.view-feature{
+    // display: none;
+    display: none;
+
+    @media only screen and(min-width: $desktop-breakpoint){
+        background-color: aqua;
+        display: block;
     }
 }
 

@@ -5,10 +5,16 @@
    display: grid;
    gap: 1rem;
    margin-top: 2rem;
+   background: $live-grey;
    
    .offers-container-img{
-       background: #bdbdbd82;
-       height: 162px;
+        background: #bdbdbd82;
+        height: 500px;
+        width: 80vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+       
 
        .container-precios{
 
@@ -50,7 +56,20 @@
         }
 
         .offers-container-description{
+            display: flex;
             color: $letra-grey;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .descrip-room{
+                max-width: 750px;
+                margin-bottom: 1rem;
+            }
+
+            @media only screen and(min-width: $desktop-breakpoint){
+                flex-direction: row;
+            }
+
         }
      
     }
@@ -60,6 +79,8 @@
 .container-extras{
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
+    max-width: 280px;
 
     .container-extra-data{
         p{

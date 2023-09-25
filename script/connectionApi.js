@@ -5,8 +5,6 @@ const left = document.querySelector('#btn-left');
 const rigt = document.querySelector('#btn-rigt');
 // const a = document.getElementById('#select_element');
 
-const urlencoded = new URLSearchParams();
-
 const requestOptions = {
   method: 'GET',
   headers: myHeaders
@@ -24,6 +22,7 @@ fetch("https://hotel-miranda.onrender.com/public/rooms", requestOptions)
     renderRooms(result.rooms);
   })
   .catch(error => console.log('error', error));
+
 
 function renderRooms(rooms){
   const itemsString = createRoomsItems(rooms).join('');
