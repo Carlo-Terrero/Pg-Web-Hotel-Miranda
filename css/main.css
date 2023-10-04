@@ -379,7 +379,6 @@ h1, h2, h3, h4 {
 }
 @media only screen and (min-width: 1000px) {
   .facilities .container-facil {
-    background-color: aqua;
     display: grid;
     justify-content: start;
     align-items: start;
@@ -422,7 +421,6 @@ h1, h2, h3, h4 {
 }
 @media only screen and (min-width: 1000px) {
   .view-feature {
-    background-color: aqua;
     display: block;
   }
 }
@@ -432,7 +430,6 @@ h1, h2, h3, h4 {
 }
 @media only screen and (min-width: 1000px) {
   .view {
-    background-color: aqua;
     display: block;
   }
 }
@@ -839,7 +836,6 @@ h1, h2, h3, h4 {
   }
   .restaurant-container .img-restaurant {
     max-width: 5%;
-    background-color: aqua;
   }
   .restaurant-container .data-restaurant {
     gap: 0.5rem;
@@ -945,6 +941,19 @@ h1, h2, h3, h4 {
 }
 .formulario-contact .btn-normal {
   margin: 2rem auto 5rem auto;
+}
+.formulario-contact .mid-container {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1000px) {
+  .formulario-contact .mid-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .formulario-contact .mid-container input {
+    width: 50%;
+  }
 }
 
 .custom-map-control-button {

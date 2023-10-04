@@ -159,8 +159,6 @@
                 }
             }
         }
-    
-       
     }
 
     @media only screen and ( min-width: $desktop-breakpoint) {        
@@ -344,7 +342,6 @@
     
 }
 
-
 //FACILITIES
 .facilities{
     @include margenes;
@@ -365,11 +362,11 @@
 
     .container-facil{
         display: grid;
-        justify-content: start;
-        align-items: start;
-        text-align: start;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 6rem;
+        // justify-content: start;
+        // align-items: start;
+        // text-align: start;
+        // grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
 
         .facilities-individua{
 
@@ -389,8 +386,7 @@
                     height: 3.4rem;
                     padding-bottom: 1rem;
                     
-                }
-                
+                }                
             }
 
             .facil-title{
@@ -402,8 +398,15 @@
                 margin-bottom: 0.5rem;
             }           
         }
-
         
+        @media only screen and(min-width: $desktop-breakpoint){
+            display: grid;
+            justify-content: start;
+            align-items: start;
+            text-align: start;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6rem;
+        }
     }
 }
 
@@ -442,14 +445,29 @@
 }
 
 .view-feature{
-    // display: none;
     display: none;
 
     @media only screen and(min-width: $desktop-breakpoint){
-        background-color: aqua;
         display: block;
     }
 }
+
+.view{
+    display: block;
+
+    @media only screen and(min-width: $desktop-breakpoint){
+        display: block;
+    }
+}
+
+// .block-feature{
+//     display: block;
+
+//     @media only screen and(min-width: $desktop-breakpoint){
+//         background-color: aqua;
+//         display: block;
+//     }
+// }
 
 
 //icon galleta

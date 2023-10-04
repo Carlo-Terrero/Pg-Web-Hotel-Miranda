@@ -1,6 +1,5 @@
 .altura{
     height: 32vh !important; 
-    
 }
 
 @media only screen and (min-width: $desktop-breakpoint){
@@ -9,7 +8,6 @@
     }
     .altura{
         height: 42vh !important; 
-        
     }
 }
 
@@ -36,10 +34,6 @@
     }
 }
 
-// .secondIndicador{
-//     background: aqua;
-// }
-
 .conten-contactos{
     @include margenes-pequeños;
 
@@ -64,7 +58,6 @@
             h2{
                 margin-bottom: 1.5rem;
             }
-            
         }
     }
 
@@ -86,7 +79,6 @@
 @media only screen and (min-width: $desktop-breakpoint){
     #imag-contact{
         height: 400px;
-
     }
 }
 
@@ -114,6 +106,22 @@
 
     .btn-normal{
         margin: 2rem auto 5rem auto;
+    }
+
+    .mid-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint){
+        .mid-container{
+            flex-direction: row;
+            gap: 1rem;
+
+            input{
+                width: 50%;
+            }
+        }
     }
 }
 
