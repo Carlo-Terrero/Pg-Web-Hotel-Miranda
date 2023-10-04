@@ -14,3 +14,48 @@
     @include margenes;
     margin-top: 9vh;
 }
+
+.restaurant-container{
+    @include margenes;
+    margin-bottom: 2rem;
+
+    .img-restaurant{
+        min-width: 330px;
+        max-width: 500px;
+        min-height: 225px;
+        background-image: url("https://images.unsplash.com/photo-1559232075-c14c9818e67e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDY3NzJ8MHwxfHNlYXJjaHwyNnx8cmVzdGF1cmFudGV8ZW58MHx8fHwxNjk2NDMzMzA2fDA&ixlib=rb-4.0.3&q=80");
+        background-repeat: no-repeat;
+    }
+    
+    .data-restaurant{
+        display: grid;
+        gap: 1rem;
+
+        .mini-title-restauran{
+            color: $letra-grey;
+        }
+
+        .sub-title-restaurant{
+            font-size: 1.8rem;
+        }
+
+        .text-restaurant-container{
+            color: $letra-grey;
+        }
+    }
+
+    @media only screen and(min-width: $desktop-breakpoint){
+        display: flex;
+        gap: 2rem;
+        
+        .img-restaurant{
+            max-width: 5%;
+            background-color: aqua;
+        }
+
+        .data-restaurant{
+            gap: 0.5rem;
+        }
+
+    }   
+}
