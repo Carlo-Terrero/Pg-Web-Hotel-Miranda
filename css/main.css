@@ -353,11 +353,7 @@ h1, h2, h3, h4 {
 }
 .facilities .container-facil {
   display: grid;
-  justify-content: start;
-  align-items: start;
-  text-align: start;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 6rem;
+  gap: 5rem;
 }
 .facilities .container-facil .facilities-individua .img-container {
   justify-content: space-between;
@@ -380,6 +376,17 @@ h1, h2, h3, h4 {
 }
 .facilities .container-facil .facilities-individua .facil-content {
   margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 1000px) {
+  .facilities .container-facil {
+    background-color: aqua;
+    display: grid;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+  }
 }
 
 .black_facilities {
@@ -415,6 +422,16 @@ h1, h2, h3, h4 {
 }
 @media only screen and (min-width: 1000px) {
   .view-feature {
+    background-color: aqua;
+    display: block;
+  }
+}
+
+.view {
+  display: block;
+}
+@media only screen and (min-width: 1000px) {
+  .view {
     background-color: aqua;
     display: block;
   }
@@ -625,6 +642,7 @@ h1, h2, h3, h4 {
   background-color: #BEAD8E;
   border: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .btn-large {
@@ -787,6 +805,45 @@ h1, h2, h3, h4 {
   margin-left: 12vw;
   margin-right: 12vw;
   margin-top: 9vh;
+}
+
+.restaurant-container {
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-bottom: 2rem;
+}
+.restaurant-container .img-restaurant {
+  min-width: 330px;
+  max-width: 500px;
+  min-height: 225px;
+  background-image: url("https://images.unsplash.com/photo-1559232075-c14c9818e67e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDY3NzJ8MHwxfHNlYXJjaHwyNnx8cmVzdGF1cmFudGV8ZW58MHx8fHwxNjk2NDMzMzA2fDA&ixlib=rb-4.0.3&q=80");
+  background-repeat: no-repeat;
+}
+.restaurant-container .data-restaurant {
+  display: grid;
+  gap: 1rem;
+}
+.restaurant-container .data-restaurant .mini-title-restauran {
+  color: #777777;
+}
+.restaurant-container .data-restaurant .sub-title-restaurant {
+  font-size: 1.8rem;
+}
+.restaurant-container .data-restaurant .text-restaurant-container {
+  color: #777777;
+}
+@media only screen and (min-width: 1000px) {
+  .restaurant-container {
+    display: flex;
+    gap: 2rem;
+  }
+  .restaurant-container .img-restaurant {
+    max-width: 5%;
+    background-color: aqua;
+  }
+  .restaurant-container .data-restaurant {
+    gap: 0.5rem;
+  }
 }
 
 .altura {
