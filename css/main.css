@@ -25,6 +25,47 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 1rem;
 }
+.Nav-Bar #btn_menu {
+  display: none;
+}
+.Nav-Bar .lbl-menu {
+  width: 25px;
+  height: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.Nav-Bar .lbl-menu #spn1, .Nav-Bar #spn2, .Nav-Bar #spn3 {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 400ms ease;
+  background: black;
+}
+.Nav-Bar #spn2 {
+  top: 9px;
+}
+.Nav-Bar #spn3 {
+  top: 18px;
+}
+.Nav-Bar #btn_menu:checked ~ .lbl-menu #spn1 {
+  transform: rotate(140deg);
+  top: 10px;
+}
+.Nav-Bar #btn_menu:checked ~ .lbl-menu #spn2 {
+  opacity: 0;
+}
+.Nav-Bar #btn_menu:checked ~ .lbl-menu #spn3 {
+  transform: rotate(-140deg);
+  top: 10px;
+}
+.Nav-Bar #btn_menu:checked ~ .container-menu {
+  display: block;
+}
+.Nav-Bar #btn_menu:checked ~ .container-menu ul {
+  display: block;
+}
 .Nav-Bar .left {
   align-items: center;
 }
@@ -34,19 +75,25 @@ h1, h2, h3, h4 {
   padding-right: 0.3rem;
   box-shadow: 0px 25px 37px 3px rgba(0, 0, 0, 0.22);
 }
-.Nav-Bar #burguer:focus ~ .container-menu {
-  display: block;
-}
 .Nav-Bar .container-menu {
   background-color: #FFFFFF;
   color: #222222;
   display: grid;
   width: 100%;
   position: absolute;
-  margin-top: 17.1rem;
+  margin-top: 12.1rem;
   display: none;
 }
-.Nav-Bar .container-menu a {
+.Nav-Bar .container-menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: none;
+}
+.Nav-Bar .container-menu li {
+  margin-bottom: 8px;
+}
+.Nav-Bar .container-menu li a {
   color: black;
   text-decoration: none;
   margin-left: 1rem;
