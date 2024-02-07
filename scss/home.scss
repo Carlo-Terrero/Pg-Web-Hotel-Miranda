@@ -399,7 +399,7 @@
             }           
         }
         
-        @media only screen and(min-width: $desktop-breakpoint){
+        @media only screen and (min-width: $desktop-breakpoint){
             display: grid;
             justify-content: start;
             align-items: start;
@@ -447,7 +447,7 @@
 .view-feature{
     display: none;
 
-    @media only screen and(min-width: $desktop-breakpoint){
+    @media only screen and (min-width: $desktop-breakpoint){
         display: block;
     }
 }
@@ -455,7 +455,7 @@
 .view{
     display: block;
 
-    @media only screen and(min-width: $desktop-breakpoint){
+    @media only screen and (min-width: $desktop-breakpoint){
         display: block;
     }
 }
@@ -463,7 +463,7 @@
 // .block-feature{
 //     display: block;
 
-//     @media only screen and(min-width: $desktop-breakpoint){
+//     @media only screen and (min-width: $desktop-breakpoint){
 //         background-color: aqua;
 //         display: block;
 //     }
