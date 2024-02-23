@@ -848,7 +848,7 @@ h1, h2, h3, h4 {
 .sub-title {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -869,7 +869,7 @@ h1, h2, h3, h4 {
   margin-bottom: 2rem;
 }
 .restaurant-container .img-restaurant {
-  min-width: 330px;
+  min-width: 245px;
   max-width: 500px;
   min-height: 225px;
   background-image: url("https://images.unsplash.com/photo-1559232075-c14c9818e67e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDY3NzJ8MHwxfHNlYXJjaHwyNnx8cmVzdGF1cmFudGV8ZW58MHx8fHwxNjk2NDMzMzA2fDA&ixlib=rb-4.0.3&q=80");
@@ -898,6 +898,9 @@ h1, h2, h3, h4 {
   }
   .restaurant-container .data-restaurant {
     gap: 0.5rem;
+  }
+  .restaurant-container .sub-title {
+    font-size: 3rem;
   }
 }
 
@@ -1119,63 +1122,66 @@ input[type=button].button-secondary:hover {
     font-size: medium;
 }
  */
-.offers_container {
+#offers_container {
   margin-left: 4vw;
   margin-right: 4vw;
   display: grid;
   gap: 1rem;
   margin-top: 2rem;
+}
+#offers_container .offers_room {
+  margin-bottom: 1.5rem;
   background: #F8F8F8;
 }
-.offers_container .offers-container-img {
-  background: rgba(189, 189, 189, 0.5098039216);
-  height: 500px;
-  width: 80vw;
+#offers_container .offers_room .offers-container-img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 15rem;
+  max-width: 360px;
 }
-.offers_container .offers-container-img .container-precios .precio-actual {
+#offers_container .offers_room .offers-container-img .container-precios .precio-actual {
   font-size: 1.5rem;
   color: #BEAD8E;
 }
-.offers_container .offers-container-img .container-precios .noche-actual {
+#offers_container .offers_room .offers-container-img .container-precios .noche-actual {
   font-size: 1rem;
 }
-.offers_container .offers-container-img .container-precios .precio-descuento {
+#offers_container .offers_room .offers-container-img .container-precios .precio-descuento {
   font-size: 2rem;
   color: #DE5777;
 }
-.offers_container .offers-container-img .container-precios .noche-descuento {
+#offers_container .offers_room .offers-container-img .container-precios .noche-descuento {
   font-size: 1rem;
 }
-.offers_container .container-container {
+#offers_container .offers_room .container-container {
   margin-left: 4vw;
   margin-right: 4vw;
   display: grid;
   gap: 1rem;
 }
-.offers_container .container-container button {
+#offers_container .offers_room .container-container button {
   margin-bottom: 1rem;
 }
-.offers_container .container-container .room-type {
+#offers_container .offers_room .container-container .room-type {
   color: #777777;
 }
-.offers_container .container-container .room-name {
+#offers_container .offers_room .container-container .room-name {
   font-size: 2.5rem;
 }
-.offers_container .container-container .offers-container-description {
+#offers_container .offers_room .container-container .offers-container-description {
   display: flex;
   color: #777777;
   justify-content: space-between;
   flex-direction: column;
 }
-.offers_container .container-container .offers-container-description .descrip-room {
+#offers_container .offers_room .container-container .offers-container-description .descrip-room {
   max-width: 750px;
   margin-bottom: 1rem;
 }
 @media only screen and (min-width: 1000px) {
-  .offers_container .container-container .offers-container-description {
+  #offers_container .offers_room .container-container .offers-container-description {
     flex-direction: row;
   }
 }

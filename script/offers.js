@@ -1,4 +1,4 @@
-const section = document.querySelector('#container-rooms');
+const section = document.querySelector('#offers_container');
 const left = document.querySelector('#btn-left');
 const rigt = document.querySelector('#btn-rigt');
 // const a = document.getElementById('#select_element');
@@ -14,7 +14,6 @@ const requestOptions = {
 fetch("https://hotel-miranda.onrender.com/public/offert", requestOptions)
     .then(response => response.json())
     .then(result => {
-        console.log(result.rooms)
         renderRooms(result.rooms);
     })
     .catch(error => console.log('error', error)
@@ -35,8 +34,7 @@ const createRoomsItems = rooms => rooms.map( room => {
     let desc = (room.price * room.discount) / 100;
     let totalPrice = room.price - desc;
     return `
-        <div class="offers_container">
-            
+        <div class="offers_room">
             <div class="offers-container-img" style="background-image: url(${room.foto})">
                 <div class="container-precios">
                     <s class="precio-actual"> 

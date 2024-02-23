@@ -1,78 +1,82 @@
-.offers_container{
-    //@include margenes;
-   // margin: 0 auto 0 auto;
+// Poner en lista cuando sea grande
+#offers_container{
    @include margenes-pequeños;
    display: grid;
    gap: 1rem;
    margin-top: 2rem;
-   background: $live-grey;
    
-   .offers-container-img{
-        background: #bdbdbd82;
-        height: 500px;
-        width: 80vw;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-       
+   .offers_room{
+        margin-bottom: 1.5rem;
+        background: $live-grey;
 
-       .container-precios{
+        .offers-container-img{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 15rem;
 
-            .precio-actual{
-                font-size: 1.5rem;
-                color: $crema;
-            }
+            max-width: 360px;
 
-            .noche-actual{
-                font-size: 1rem;
-            }
+            .container-precios{
 
-            .precio-descuento{
-                font-size: 2rem;
-                color: #DE5777;
-            }
+                .precio-actual{
+                    font-size: 1.5rem;
+                    color: $crema;
+                }
 
-            .noche-descuento{
-                font-size: 1rem;
+                .noche-actual{
+                    font-size: 1rem;
+                }
+
+                .precio-descuento{
+                    font-size: 2rem;
+                    color: #DE5777;
+                }
+
+                .noche-descuento{
+                    font-size: 1rem;
+                }
             }
         }
-    }
 
-   .container-container{
-        @include margenes-pequeños;
-        display: grid;
-        gap: 1rem;
+    .container-container{
+            @include margenes-pequeños;
+            display: grid;
+            gap: 1rem;
 
-        button{
-            margin-bottom: 1rem;
-        }  
-        
-        .room-type{
-            color: $letra-grey;
-        }
-
-        .room-name{
-            font-size: 2.5rem;
-        }
-
-        .offers-container-description{
-            display: flex;
-            color: $letra-grey;
-            justify-content: space-between;
-            flex-direction: column;
-
-            .descrip-room{
-                max-width: 750px;
+            button{
                 margin-bottom: 1rem;
+            }  
+            
+            .room-type{
+                color: $letra-grey;
             }
 
-            @media only screen and (min-width: $desktop-breakpoint){
-                flex-direction: row;
+            .room-name{
+                font-size: 2.5rem;
             }
 
+            .offers-container-description{
+                display: flex;
+                color: $letra-grey;
+                justify-content: space-between;
+                flex-direction: column;
+
+                .descrip-room{
+                    max-width: 750px;
+                    margin-bottom: 1rem;
+                }
+
+                @media only screen and (min-width: $desktop-breakpoint){
+                    flex-direction: row;
+                }
+
+            }
+        
         }
-     
     }
+    
 
 }
 
@@ -187,8 +191,7 @@
                     border: none;
                     background-color: #ffffff;
                 }
-            }
-            
+            }   
         }
     }
 }
